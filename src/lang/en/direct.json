@@ -1,0 +1,31 @@
+{
+    "name": "Customer Name",
+    "company": "Company Name",
+    "email": "Contact Email",
+    "tel": "Contact Telphone Number",
+    "sub": "Subject",
+    "desc": "Message to send me",
+    "up": "Upload attached file",
+    "btn": "Send",
+    "close": "Close",
+    "success": {
+        "title": "Message has been sent",
+        "desc": "Message has been sent to me. Please wait to reply soon. Thank you.",
+        "icon": "success"
+    },
+    "error": {
+        "title": "Fail to send Message",
+        "desc": "Unknown error to sending message. System maybe problem. Please try to contact me another ways.",
+        "icon": "error"
+    },
+    "warning": {
+        "title": "Format invalid or required field blank",
+        "desc": "Found error to sending message. Format invalid or required field is not blank.",
+        "icon": "warning"
+    },
+    "uploadwarning": {
+        "title": "Larged file sizes or invalid file type",
+        "desc": "Compatible File Format: JPG, PNG, PDF, DOCX, DOC\nMaximum file sizes: 3 MB",
+        "icon": "warning"
+    }
+}

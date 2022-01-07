@@ -1,0 +1,54 @@
+{
+    "title": "ความสามารถด้านการพัฒนาโปรแกรม",
+    "list": [
+        {
+            "title": "HTML CSS, Javascript and JQuery",
+            "group": "Front-End framework",
+            "desc": "สามารถใช้ HTML/CSS (Bootstrap Framework) ในการปรับแต่งโครงสร้างหน้าเว็บได้ และใช้ JQuery ในการเรนเดอร์ลูกเล่นบนหน้าเว็บ รวมทั้งใช้ AJAX เพื่อดึงข้อมูลจากระบบหลังบ้านได้",
+            "learnrate": [2,2,2,2,0],
+            "color": "primary"
+        },
+        {
+            "title": "ASP.NET MVC VB.Net/C#",
+            "group": "Back-End framework",
+            "desc": "ออกแบบระบบหลังบ้านโดยใช้ .NET Framework (VB.Net และ C#) ได้ และเชื่อมต่อกับ Database ประเภท MySQL หรือ SQL Server ได้",
+            "learnrate": [2,2,2,1,0],
+            "color": "secondary"
+        },
+        {
+            "title": "ASP.NET CORE MVC",
+            "group": "Back-End framework",
+            "desc": "ออกแบบระบบหลังบ้านโดยใช้ .NET Core Framework (C#) ได้ รวมทั้งระบบหลังบ้านแบบ API รองรับแพลตฟอร์มการเข้าถึงการร้องขอจากทรัพยากรภายนอก (CORS Support) และเชื่อมต่อกับ Database ประเภท MySQL หรือ SQL Server ได้",
+            "learnrate": [2,2,2,0,0],
+            "color": "secondary"
+        },
+        {
+            "title": "SQL Server, MySQL",
+            "group": "Database Tool",
+            "desc": "ออกแบบ Database และสามารถใช้คำสั่งพื้นฐาน (CREATE, SELECT, INSERT, UPDATE, DELETE) ได้ และใช้งาน Store procedured ได้เบื้องต้น (ใช้ได้ทั้ง Microsoft SQL Server และ MySQL)",
+            "learnrate": [2,2,2,0,0],
+            "color": "secondary"
+        },
+        {
+            "title": "React JS",
+            "group": "Front-End framework",
+            "desc": "สามารถใช้ React JS พัฒนา Single Page Application User Interface ได้แบบขั้นพื้นฐาน ทำให้เว็บทำงานได้ไวขึ้นกว่าเดิม",
+            "learnrate": [2,2,1,0,0],
+            "color": "primary"
+        },
+        {
+            "title": "Microsoft Office",
+            "group": "Another Skill",
+            "desc": "ใช้โปรแกรม Microsoft Office Word/Excel/Powerpoint ได้ในเบื้องต้น",
+            "learnrate": [2,2,0,0,0],
+            "color": "error"
+        },
+        {
+            "title": "Another programming/IT skill",
+            "group": "Another Skill",
+            "desc": "ในส่วนอื่นๆเกี่ยวกับคอมพิวเตอร์หรือภาษาโปรแกรมอื่นๆ อาจเคยศึกษามาบ้างหรือเคยได้ยิน และจำเป็นต้องใช้เวลาในการศึกษาเพิ่มเติม",
+            "learnrate": [2,1,0,0,0],
+            "color": "error"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+   "lang": "EN",
+   "reduce": "Best performance",
+   "menu": {
+        "home": "Home",
+        "pro": "Profile",
+        "edu": "Education",
+        "job": "Internship & Job History",
+        "skill": "Developer Skill",
+        "port": "Portfolio",
+        "hobby": "Hobby & Interesting",
+        "call": "Contact us",
+        "vac": "Vaccinated Status",
+        "set": "Setting",
+        "abo": "About",
+        "api": "Access our profile with API",
+        "doclib": "Document Library"
+    },
+    "apicoming": "MyPort API service is under final testing. It's almost ready. Stay tuned.",
+    "btnOK": "Close",
+    "about": {
+        "head": "About MyPort Website and Public API",
+        "developName": "Developed by Chinnathorn Promnaruritr",
+        "desc": "MyPort Website is Chinnathorn's online Portfolio. It's design on React JS framework and run undered by ASP.Net Core 3.1 Web API. I use Microsoft Azure to hosted backend and Google firebase to hosted React JS static site. We also have Public API called 'MyPort API' to access our contents similiar this site focused.",
+        "uptLog": "Update description: Adjust miner layout of Favorite Modal dialog. And embeded Artist or celeb official website link. And improve motion graphic."
+    },
+    "setting": {
+        "changeL": "Select language",
+        "cReg": "Current Region",
+        "title": "Settings"
+    },
+    "settingGuide": {
+        "perfor": "Enable this feature will be reduce motion graphic and transition and better performance",
+        "cReg": "System will be detect the fastest server region to serve client",
+        "cLat": "Latency is time duration from request to server region until response data to client. Lower number is better."
+    }
+}

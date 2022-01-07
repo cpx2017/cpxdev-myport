@@ -1,0 +1,72 @@
+{
+  "name": "myport-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fontsource/mitr": "^4.4.5",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.58",
+    "@material-ui/pickers": "^3.3.10",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
+    "firebase-tools": "^10.0.1",
+    "jquery": "^3.6.0",
+    "material-ui-image": "^3.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-iframe": "^1.8.0",
+    "react-material-ui-carousel": "^2.2.6",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-sitemap": "^1.2.0",
+    "react-router-transition": "^2.1.0",
+    "react-scripts": "4.0.3",
+    "react-snowfall": "^1.1.1",
+    "react-sweet-progress": "^1.1.2",
+    "react-switch-lang": "^1.0.2",
+    "react-transition-group": "^4.4.2",
+    "react-vertical-timeline-component": "^3.3.3",
+    "sweetalert2": "^11.0.20",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "sitemap": "babel-node ./src/sitemap.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "main": "index.js",
+  "author": "",
+  "license": "CPXDevStudio",
+  "description": "",
+  "devDependencies": {
+    "@babel/register": "^7.15.3",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "gh-pages": "^3.2.3"
+  }
+}

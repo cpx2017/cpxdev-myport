@@ -1,0 +1,41 @@
+{
+    "title": "Homepage",
+    "load": "Loading, please wait",
+    "slide": [
+        {
+            "title": "Happy New Year 2022",
+            "desc": "Thanks for all support to this site and seeing new feature in this year. Good luck whole of year and stay safe from Covid-19!",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@latest/main/newyear.jpg",
+            "lnk": "https://open.spotify.com/playlist/62bxySDZMkemqxbrpgcfgf?si=806e7d0724d247b3"
+        },
+        {
+            "title": "Hi! I'm Chinnathorn.",
+            "desc": "I'm a Junior Programmer who find new experience and improve more skill.",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@latest/myport/Background.jpg"
+        },
+        {
+            "title": "I'm a New-Gen Web Developer.",
+            "desc": "All developers are different skill and learning knowledge. But same thing is loving coding and work hard for developing job.",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@latest/myport/Background1.jpg"
+        }
+    ],
+    "covid": "Daily Covid-19 Cases Report",
+    "covidmap": "View covid-19 World map statistic",
+    "coviddata": [
+        {
+            "detail": "New cases today",
+            "overall": "Overall",
+            "unit": "person(s)"
+        },
+        {
+            "detail": "Recovered today",
+            "overall": "Overall",
+            "unit": "person(s)"
+        },
+        {
+            "detail": "Death cases today",
+            "overall": "Overall",
+            "unit": "person(s)"
+        }
+    ]
+}

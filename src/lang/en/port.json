@@ -1,0 +1,41 @@
+{
+    "title": "Portfolio",
+    "see": "Visit sample portfolio",
+    "list": [
+        {
+            "title": "Service Booking Manager for Marking Machine Service",
+            "group": "VB.Net Desktop App with SQL Server",
+            "desc": "This software is developed under VB.Net programming language and save database data MS SQL Server 2014. This software is VB.Net Windows Form Application and It worked when you connect in office network (You cannot be access from outside network). And next, these all features which included in this software/system.",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-1.jpg",
+            "link": ""
+        },
+        {
+            "title": "Chinnathorn's MyPort Website",
+            "group": "React JS Frond-End framework and .NET Core Back-End API",
+            "desc": "Current site which you opened is my online portfolio. The first web application on microservice system architecture. We use React JS to design modern and better performance UI and ASP.NET Core Web API Back-end to save visitor contact in our database.",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-2.jpg",
+            "link": ""
+        },
+        {
+            "title": "Telesis Marking Control Software System",
+            "group": "VB.Net Desktop App",
+            "desc": "Send data and marking controller software for TMC 470 Marking Controller to marking Chassis (Part of Vehicle) reason in vehicle industrial company ex. CML. (Capital Manufacuing Limited of RMA Group which production of vehicle brand 'Ford' in Myanmar and Thailand.) This software is developed in VB.Net language and worked with MySQL database and send data to Controller via RS232 Cable (Serialport).",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-3.png",
+            "link": ""
+        },
+        {
+            "title": "PreOrder Platform",
+            "group": ".NET Core MVC E-Commerce Web app",
+            "desc": "It's e-commerce web system to manage imported pre-order products. This platform will migrate from .NET Framework to .NET Core 3.1, Docker Container support. (based on Linux) and additional feature liked improve search-engine performance, Upload slip payment, Payment confirmation record system etc",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-4.png",
+            "link": "https://preorderplatform.azurewebsites.net"
+        },
+        {
+            "title": "Survey Platform Web Application",
+            "group": "React JS with Node JS.",
+            "desc": "Followed by last job, I developed survey platform for researching with the financial company. It can manage survey question which you want and smooth system with React JS framework and NodeJS server side to run better performance.",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-5.PNG",
+            "link": ""
+        }
+    ]
+}
