@@ -235,7 +235,7 @@ const DirectForm = ({ setCol, open, Transition, ditlt, setOpen}) => {
                     <TextField id="company" color={color} fullWidth={true} label={Lang.company} />
                   </Grid>
                   <Grid item xs={12} md={7}>
-                    <TextField id="mail" color={color} placeholder="info@chinnathornp.ga" fullWidth={true} label={Lang.email} />
+                    <TextField id="mail" color={color} placeholder="info@cpxdev.tk" fullWidth={true} label={Lang.email} />
                   </Grid>
                   <Grid item xs={12} md={5}>
                     <TextField id="tel" color={color} placeholder="+66812345678" type="tel" fullWidth={true} label={Lang.tel} />

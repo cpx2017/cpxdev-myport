@@ -8,7 +8,7 @@ require("babel-register")({
   function generateSitemap() {
       return (
         new Sitemap(router)
-            .build("https://myportofficial.chinnathornp.ga")
+            .build("https://myportofficial.cpxdev.tk")
             .save("./public/sitemap.xml")
       );
   }

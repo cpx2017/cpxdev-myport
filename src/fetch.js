@@ -2,7 +2,7 @@ var ul = '';
 var added = false;
 var reg = 'Loading';
 
-fetch('https://webauth.chinnathornp.ga/api/checkregion', {method: 'POST'})
+fetch('https://webauth.cpxdev.tk/api/checkregion', {method: 'POST'})
 .then(response => response.json())
   .then(data => {
     if (data["url"] !== "") {

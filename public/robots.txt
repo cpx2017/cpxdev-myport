@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Sitemap: https://myportofficial.chinnathornp.ga/sitemap.xml
+Sitemap: https://myportofficial.cpxdev.tk/sitemap.xml
 Disallow:

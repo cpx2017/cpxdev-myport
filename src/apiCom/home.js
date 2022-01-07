@@ -22,7 +22,7 @@ const Home = ({Load, setLoadIco, col, setCol}) => {
   const [ stat, setstat] = React.useState(null);
   const mailpat = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
     const APITest = () => {
-      axios.get('https://api.chinnathornp.ga/Home/status')
+      axios.get('https://api.cpxdev.tk/Home/status')
       .then(function () {
           setstat(true)
       }).catch(function () {
