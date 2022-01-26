@@ -31,9 +31,17 @@ const Hob = () => {
     });
     const getvac = {
         set: true,
-        url1: "https://bit.ly/3p0zfyC",
+        url1: "http://bit.ly/3r35M80",
         url2: "http://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/Vaccinated.pdf"
     }
+
+    function handleAndroidMobile(myURL) {
+      var link = document.createElement('a');
+      link.download = 'Vaccinated.pdf';
+      link.href = myURL;
+      link.click();
+    }
+
     return (
         <div>
           <Slide direction="right" in={true} timeout={localStorage.getItem('graphic') === null ? 600 : 0}>
@@ -57,7 +65,7 @@ const Hob = () => {
                     {getvac.set === true && (
                       <ButtonGroup>
                         <Button color="primary" variant="contained" target="_blank" href={getvac.url1}>{Lang.done.btndigital}</Button>
-                        <Button color="primary" variant="contained" target="_blank" href={getvac.url2} download>{Lang.done.btnplain}</Button>
+                        <Button color="primary" variant="contained" onClick={() => handleAndroidMobile(getvac.url2)}>{Lang.done.btnplain}</Button>
                       </ButtonGroup>
                     )}
                 </CardContent>
