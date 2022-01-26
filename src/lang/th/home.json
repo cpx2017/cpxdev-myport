@@ -3,12 +3,6 @@
     "load": "กำลังโหลดข้อมูล กรุณารอสักครู่",
     "slide": [
         {
-            "title": "Happy New Year 2022",
-            "desc": "ขอขอบคุณทุกการสนับสนุนเว็บไซต์ของเราโดยตลอดมา เตรียมพบกับฟีเจอร์ใหม่ๆในปีนี้ ขอให้โชคดีและมีความสุขตลอดทั้งปี",
-            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@latest/main/newyear.jpg",
-            "lnk": "https://open.spotify.com/playlist/41BknGq06bxbJujOrjs3CU?si=8dbe69608a87405a"
-        },
-        {
             "title": "Hi! I'm Chinnathorn.",
             "desc": "ผมเป็นโปรแกรมเมอร์ใหม่ที่กำลังหาความรู้ใหม่ๆ เพื่อต่อยอดตัวเอง",
             "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@latest/myport/Background.jpg"
