@@ -57,7 +57,7 @@ const Hob = () => {
                     {getvac.set === true && (
                       <ButtonGroup>
                         <Button color="primary" variant="contained" target="_blank" href={getvac.url1}>{Lang.done.btndigital}</Button>
-                        <Button color="primary" variant="contained" target="_blank" href={getvac.url2}>{Lang.done.btnplain}</Button>
+                        <Button color="primary" variant="contained" target="_blank" href={getvac.url2} download>{Lang.done.btnplain}</Button>
                       </ButtonGroup>
                     )}
                 </CardContent>
