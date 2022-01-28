@@ -581,8 +581,8 @@ React.useEffect(() => {
           </Tooltip>
           <Tooltip enterDelay={1000} title={Lang.settingGuide.cReg}>
           <ListItem onClick={() => {
-                  window.open('https://status.cpxdev.tk', '_blank').focus()
-                }} button>
+            window.open('https://status.cpxdev.tk', '_blank').focus()
+          }} button>
             <ListItemIcon>
               <PublicIcon />
             </ListItemIcon>
