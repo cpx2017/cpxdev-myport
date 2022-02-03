@@ -16,6 +16,13 @@
             "type": "Viral Vector Vaccines",
             "place": "Faculty of Medicine, Siriraj Hospital",
             "stat": "Vaccinated"
+        },
+        {
+            "date": "19 March 2021",
+            "name": "None (Marked as Pfizer)",
+            "type": "messenger RiboNucleic Acid (mRNA) Vaccines",
+            "place": "Bangsue Grand Station",
+            "stat": "Made an appointment"
         }
     ],
     "listhead": {
@@ -26,7 +33,7 @@
         "stat": "Status",
         "allstat": "Overall"
     },
-    "allstat": "Planing for booster vaccinated (Third Dose)",
+    "allstat": "Made an appointment for booster vaccinated (Third Dose)",
     "done": {
         "btndigital": "View Certification",
         "btnplain": "Download Certification"
