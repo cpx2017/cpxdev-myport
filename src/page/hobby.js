@@ -158,7 +158,7 @@ const Hob = () => {
             transitionDuration={localStorage.getItem('graphic') === null ? 500 : 200}
             open={isOpen}
             onClose={() => setOpen(false)}
-            maxWidth="md"
+            maxWidth="lg"
             scroll={'paper'}
             aria-labelledby="scroll-dialog-title"
             aria-describedby="scroll-dialog-description"

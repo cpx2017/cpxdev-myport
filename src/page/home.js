@@ -66,7 +66,7 @@ const Home = () => {
                      <Card>
                         <CardActionArea>
                           <br/>
-                          <Typography variant="h6">&nbsp;{Lang.covid}</Typography>
+                          <Typography className='ml-4' variant="h6">&nbsp;{Lang.covid}</Typography>
                           <hr />
                           <CardContent>
                             <Covid Lang={Lang} setReady={(val) => setReady(val)} /> 

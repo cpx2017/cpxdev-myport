@@ -79,3 +79,8 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.app-barcurve {
+  border-bottom-right-radius: 18px !important;
+  border-bottom-left-radius: 18px !important;
+}

@@ -472,7 +472,7 @@ React.useEffect(() => {
           color="primary"
           position="fixed"
           variant="persistent"
-          className={classes.appBar}
+          className={classes.appBar + ' app-barcurve'}
         >
           <Toolbar>
           <IconButton
