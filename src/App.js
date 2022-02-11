@@ -25,6 +25,7 @@ import {
   DialogTitle,
   FormControlLabel,
   Tooltip,
+  Slide,
 } from '@material-ui/core';
 import {
   BrowserRouter,
@@ -327,8 +328,7 @@ React.useEffect(() => {
 
   return (
     <div>
-    <Grow in={swipe} timeout={localStorage.getItem('graphic') === null ? 800 : 0}>
-      <div className={classes.root}>
+   <div className={classes.root}>
         <BrowserRouter>
           <Drawer
             className={classes.drawer}
@@ -468,31 +468,33 @@ React.useEffect(() => {
             <br />
           </main>
         </BrowserRouter>
-        <AppBar
-          color="primary"
-          position="fixed"
-          variant="persistent"
-          className={classes.appBar + ' app-barcurve'}
-        >
-          <Toolbar>
-          <IconButton
-              aria-label="open drawer"
-              onClick={handleDrawerOpen}
-              edge="start"
-              className={clsx(classes.menuButton, open && classes.hide)}
-              size="large">
-              <MenuIcon />
-            </IconButton>
-            <div style={{ paddingRight: 20 }}>
-              <Avatar alt="myavatar" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/avatar.jpg" />
-            </div>
-            <a href=" " onClick={() => toHome()} className={classes.title}>
-              <Typography variant="h6" noWrap>
-                Chinnathorn's MyPort
-              </Typography>
-            </a>
-          </Toolbar>
-        </AppBar>
+        <Slide in={localStorage.getItem('graphic') === null ? !open : true} direction='down' timeout={600}>
+          <AppBar
+            color="primary"
+            position="fixed"
+            variant="persistent"
+            className={classes.appBar + ' app-barcurve'}
+          >
+            <Toolbar>
+            <IconButton
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}
+                edge="start"
+                className={clsx(classes.menuButton, open && classes.hide)}
+                size="large">
+                <MenuIcon />
+              </IconButton>
+              <div style={{ paddingRight: 20 }}>
+                <Avatar alt="myavatar" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/avatar.jpg" />
+              </div>
+              <a href=" " onClick={() => toHome()} className={classes.title}>
+                <Typography variant="h6" noWrap>
+                  Chinnathorn's MyPort
+                </Typography>
+              </a>
+            </Toolbar>
+          </AppBar>
+        </Slide>
         <footer>
           <hr />
           <Typography variant="body1" align="center">
@@ -637,7 +639,6 @@ React.useEffect(() => {
           </DialogActions>
         </Dialog>
       </div>
-    </Grow>
     </div>
   );
 }
