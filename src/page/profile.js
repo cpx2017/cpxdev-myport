@@ -51,13 +51,13 @@ const Profile = () => {
         <Grid container spacing={3}>
           {window.innerWidth > 600 ? (
             <Slide direction="right" in={true} timeout={localStorage.getItem('graphic') === null ? 500 : 0}>
-            <Grid item sm md={3}  style={{ alignItems: "center", display: 'flex', flexDirection: 'column' }}>
+            <Grid item sm md className='pl-5 pt-4'>
                 <Avatar alt="" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/author-1.jpg" className={classes.large} />
             </Grid>
         </Slide>
           ) : (
             <Grow in={true} timeout={localStorage.getItem('graphic') === null ? 1200 : 0}>
-              <Grid item sm md={3}  style={{ alignItems: "center", display: 'flex', flexDirection: 'column' }}>
+              <Grid item sm md className='pl-5 pt-4'>
                   <Avatar alt="" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/author-1.jpg" className={classes.large} />
               </Grid>
           </Grow>
@@ -65,7 +65,7 @@ const Profile = () => {
            {window.innerWidth > 600 ? (
              <Slide direction="left" in={true} timeout={localStorage.getItem('graphic') === null ? 800 : 0}>
              <Grid item sm md={9}>
-               <div className='row ml-5'>
+               <div className='row'>
                <ListItem className='col-md-5'>
                  <ListItemText primary={Lang.desc[0].title} secondary={Lang.desc[0].desc} />
                </ListItem>
@@ -96,7 +96,7 @@ const Profile = () => {
            ) : (
             <Grow in={true} timeout={localStorage.getItem('graphic') === null ? 1500 : 0}>
            <Grid item sm md={9}>
-               <div className='row ml-5'>
+               <div className='row ml-1'>
                <ListItem className='col-md-5'>
                  <ListItemText primary={Lang.desc[0].title} secondary={Lang.desc[0].desc} />
                </ListItem>
