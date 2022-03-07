@@ -26,7 +26,7 @@
         {
             "title": "PreOrder Platform",
             "group": ".NET Core MVC E-Commerce Web app",
-            "desc": "It's e-commerce web system to manage imported pre-order products. This platform will migrate from .NET Framework to .NET Core 3.1, Docker Container support. (based on Linux) and additional feature liked improve search-engine performance, Upload slip payment, Payment confirmation record system etc",
+            "desc": "It's e-commerce web system to manage imported pre-order products. This platform will migrate from .NET Framework to .NET Core 3.1, Docker Container support. (based on Linux) and powerful online store front-end with React JS. Also database supported both MySQL and SQL Server",
             "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-4.png",
             "link": "https://preorderplatreact.azurewebsites.net/"
         },
