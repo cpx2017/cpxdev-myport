@@ -22,7 +22,7 @@
             "name": "pFizer (ไฟเซอร์)",
             "type": "messenger RiboNucleic Acid (mRNA) Vaccines",
             "place": "สถานีกลางบางซื่อ",
-            "stat": "อยู่ระหว่างการนัดหมาย"
+            "stat": "เข้ารับการฉีดวัคซีนแล้ว"
         }
     ],
     "listhead": {
@@ -33,7 +33,7 @@
         "stat": "สถานะการเข้ารับบริการ",
         "allstat": "สถานะโดยรวม"
     },
-    "allstat": "อยู่ระหว่างการนัดหมายเข้ารับวัคซีนเข็มที่ 3 (ฺBooster Vaccine)",
+    "allstat": "เข้ารับวัคซีนเข็มที่ 3 (ฺBooster Vaccine) เรียบร้อยแล้ว",
     "done": {
         "btndigital": "ดูใบรับรองดิจิทัล",
         "btnplain": "ดาวน์โหลดใบรับรอง"

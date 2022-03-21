@@ -22,7 +22,7 @@
             "name": "pFizer",
             "type": "messenger RiboNucleic Acid (mRNA) Vaccines",
             "place": "Bangsue Grand Station",
-            "stat": "Pending an appointment"
+            "stat": "Vaccinated"
         }
     ],
     "listhead": {
@@ -33,7 +33,7 @@
         "stat": "Status",
         "allstat": "Overall"
     },
-    "allstat": "Pending an appointment for booster vaccination (Third Dose)",
+    "allstat": "Booster vaccinated (Third Dose)",
     "done": {
         "btndigital": "View Certification",
         "btnplain": "Download Certification"
