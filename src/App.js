@@ -485,7 +485,7 @@ React.useEffect(() => {
                 <MenuIcon />
               </IconButton>
               <div style={{ paddingRight: 20 }}>
-                <Avatar alt="myavatar" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/avatar.jpg" />
+                <Avatar alt="myavatar" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/avatar.webp" />
               </div>
               <a href=" " onClick={() => toHome()} className={classes.title}>
                 <Typography variant="h6" noWrap>

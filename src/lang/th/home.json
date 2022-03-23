@@ -5,12 +5,12 @@
         {
             "title": "Hi! I'm Chinnathorn.",
             "desc": "ผมเป็นโปรแกรมเมอร์ใหม่ที่กำลังหาความรู้ใหม่ๆ เพื่อต่อยอดตัวเอง",
-            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@latest/myport/Background.jpg"
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@latest/myport/Background.webp"
         },
         {
             "title": "I'm a New-Gen Web Developer.",
             "desc": "ผมเชื่อว่าโปรแกรมเมอร์แต่ละคนต่างมีเป้าหมายเป็นของตนเอง เช่นเดียวกับผมที่อยากเป็นโปรแกรมเมอร์เพื่อเก็บประสบการณ์เพิ่มเติมและต่อยอดจากสิ่งที่ตัวผมมีอยู่แล้วเพื่อก้าวต่อไปในอนาคต",
-            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@latest/myport/Background1.jpg"
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@latest/myport/Background1.webp"
         }
     ],
     "covid": "รายงานสถานการณ์โควิดประจำวัน",

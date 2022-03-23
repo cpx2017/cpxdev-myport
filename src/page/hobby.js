@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     loader: {
       paddingTop: theme.spacing(2),
       textAlign: 'center',
-      flexDirection: 'column',
+      alignContent: 'center',
       justifyContent: "center"
     },
     details: {

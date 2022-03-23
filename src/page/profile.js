@@ -52,13 +52,13 @@ const Profile = () => {
           {window.innerWidth > 600 ? (
             <Slide direction="right" in={true} timeout={localStorage.getItem('graphic') === null ? 500 : 0}>
             <Grid item sm md={3} className='d-flex justify-content-center align-items-center'>
-                <Avatar alt="" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/author-1.jpg" className={classes.large} />
+                <Avatar alt="" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/author-1.webp" className={classes.large} />
             </Grid>
         </Slide>
           ) : (
             <Grow in={true} timeout={localStorage.getItem('graphic') === null ? 1200 : 0}>
               <Grid item sm md className='d-flex justify-content-center align-items-center'>
-                  <Avatar alt="" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/author-1.jpg" className={classes.large} />
+                  <Avatar alt="" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/author-1.webp" className={classes.large} />
               </Grid>
           </Grow>
           )}

@@ -36,8 +36,9 @@ const FavCom = ({arr, setOpen, Lang, classes}) => {
               <br />
               <Grid container spacing={4}>
             <Grid item sm md={5}>
+            <>
               {window.innerWidth > 600 ? (
-                <Zoom in={loaded} timeout={localStorage.getItem('graphic') === null ? 800 : 0}>
+                <Zoom in={loaded} timeout={localStorage.getItem('graphic') === null ? 800 : 0} style={{ transitionDelay: 50 }}>
                 <img
                     src={arr.src}
                     alt={arr.title}
@@ -46,7 +47,7 @@ const FavCom = ({arr, setOpen, Lang, classes}) => {
                 />
               </Zoom>
               ) : (
-              <Grow in={loaded} timeout={localStorage.getItem('graphic') === null ? 800 : 0}>
+              <Grow in={loaded} timeout={localStorage.getItem('graphic') === null ? 800 : 0} style={{ transitionDelay: 50 }}>
                 <img
                     src={arr.src}
                     alt={arr.title}
@@ -55,14 +56,14 @@ const FavCom = ({arr, setOpen, Lang, classes}) => {
                 />
               </Grow>
               )}
-            
-              {!loaded && (
-                 <Grow in={!loaded}>
-                    <div className={classes.loader}>
+              </>
+              {
+                !loaded && (
+                  <div className='d-flex justify-content-center align-items-center' style={{minHeight: "200px"}}>
                       <img src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/main/cpx-circular.svg" width="70px" alt="load" />
                     </div>
-                  </Grow>
-                )}
+                )
+              }
             </Grid>
             <Grid item sm md={7}>
             <Grow in={true} timeout={localStorage.getItem('graphic') === null ? 800 : 0}>
