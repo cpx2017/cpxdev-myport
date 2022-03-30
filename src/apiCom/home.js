@@ -82,7 +82,7 @@ const Home = ({Load, setLoadIco, col, setCol}) => {
           <CardActionArea>
             <CardContent>
               <Typography gutterBottom variant="h4" component="h2">
-                  Welcome to MyPort API
+                  Welcome to MyPort API (A Part of CPX API Service)
               </Typography>
               <hr />
             </CardContent>
@@ -94,10 +94,13 @@ const Home = ({Load, setLoadIco, col, setCol}) => {
               <Typography component="p" variant="body1">
                   First, click below button to get new Client ID and Secret Pass.
               </Typography>
+              <Typography component="p" variant="body1">
+                  Notes: Given CPX API Auth profile also can use with another API service under CPX API Service (CPX Covid19 and Unofficial BNK48 Members Public API etc.).
+              </Typography>
               <br />
               <CardActions>
                 <Button color="secondary" onClick={() => setReq(true)}>
-                  Get Started MyPort API with Client ID
+                  Get CPX API Auth profile (ClientID and Secretpass)
                 </Button>
                 <Button color="secondary" href="https://documenter.getpostman.com/view/13721881/Tzz7Py3t" variant="text" target="_blank">
                   See API Documentation here
