@@ -99,7 +99,7 @@ const Home = ({Load, setLoadIco, col, setCol}) => {
               </Typography>
               <br />
               <CardActions>
-                <Button color="secondary" onClick={() => setReq(true)}>
+                <Button color="secondary" href="https://apicenter.cpxdev.tk" variant="text" target="_blank">
                   Get CPX API Auth profile (ClientID and Secretpass)
                 </Button>
                 <Button color="secondary" href="https://documenter.getpostman.com/view/13721881/Tzz7Py3t" variant="text" target="_blank">
@@ -116,48 +116,6 @@ const Home = ({Load, setLoadIco, col, setCol}) => {
             </Card>
           </CardActionArea>
         </Card>
-            <Dialog
-              TransitionComponent={Grow}
-              transitionDuration={localStorage.getItem('graphic') === null ? 500 : 200}
-              open={Req}
-              onClose={() => setReq(false)}
-              aria-labelledby="alert-dialog-title"
-              aria-describedby="alert-dialog-description"
-              maxWidth="md"
-            >
-            <DialogTitle>
-                Request ClientID and Secret Pass
-            </DialogTitle>
-              <DialogContent>
-                <DialogContentText id="alert-dialog-description">
-                <Divider />
-                <br />
-                <Grid container spacing={3}>
-                  <Grid item xs={12} md={5}>
-                    <TextField id="apiname" color="primary" fullWidth={true} label="Your name" />
-                  </Grid>
-                  <Grid item xs={12} md={7}>
-                    <TextField id="apiemail" color="primary" fullWidth={true} label="Your e-mail" />
-                  </Grid>
-                </Grid>
-                <br />
-                </DialogContentText>
-                <Divider />
-              </DialogContent>
-              <DialogActions>
-                  <Typography variant="subtitle2">
-                    Notes: Please enter your name and actived Email address. Remember, we don't show secret pass after requesting success for security reason. Please check your requested email inbox to see it.
-                  </Typography>
-              </DialogActions>
-              <DialogActions>
-                <Button onClick={() => getAccess()} color="secondary">
-                  Request
-                </Button>
-                <Button onClick={() => setReq(false)} color="secondary">
-                  Close
-                </Button>
-              </DialogActions>
-            </Dialog>
             
       </div>
     );
