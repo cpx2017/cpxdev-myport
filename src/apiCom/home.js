@@ -99,7 +99,7 @@ const Home = ({Load, setLoadIco, col, setCol}) => {
               </Typography>
               <br />
               <CardActions>
-                <Button color="secondary" href="https://apicenter.cpxdev.tk" variant="text" target="_blank">
+                <Button color="secondary" href="https://apicenter.cpxdev.tk/myport" variant="text" target="_blank">
                   Get CPX API Auth profile (ClientID and Secretpass)
                 </Button>
                 <Button color="secondary" href="https://documenter.getpostman.com/view/13721881/Tzz7Py3t" variant="text" target="_blank">
