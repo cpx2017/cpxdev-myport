@@ -19,9 +19,15 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 
+import VolumeUpIcon from '@material-ui/icons/VolumeUp';
+import VolumeOffIcon from '@material-ui/icons/VolumeOff';
+
+
 import Grow from '@material-ui/core/Grow';
 import Slide from '@material-ui/core/Slide';
 
+let pm = new Audio();
+let time;
 const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
@@ -68,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
 const Hob = () => {
     const [Lang, setLang] = useState(th);
     const [isOpen, setOpen] = React.useState(false);
+    const [muted, setMuted] = React.useState(false);
     const [music, setMusic] = React.useState([]);
     const [arr, setArr] = useState( {
       title: "",
@@ -98,19 +105,51 @@ const Hob = () => {
       var de = setInterval(function(){ 
         if (Fet().ul !== '') {
             clearInterval(de)
-            axios({
-              method: 'post',
-              url: Fet().ul + '/myportsite/spotsync?pid=' + Lang.playlist,
-            }).then(function (response) {
-              setMusic(response.data.res.items)
-          })
-          .catch(function () {
-              // handle error
-          });
+            if (localStorage.getItem('langconfig') !== null) {
+              if (localStorage.getItem('langconfig') === 'th') {
+                  axios({
+                    method: 'post',
+                    url: Fet().ul + '/myportsite/spotsync?pid=' + th.playlist,
+                  }).then(function (response) {
+                    setMusic(response.data.res.items)
+                })
+                .catch(function () {
+                    // handle error
+                });
+              } else {
+                  axios({
+                    method: 'post',
+                    url: Fet().ul + '/myportsite/spotsync?pid=' + en.playlist,
+                  }).then(function (response) {
+                    setMusic(response.data.res.items)
+                })
+                .catch(function () {
+                    // handle error
+                });
+              }
+            }
         }
     }, 1);
     }, [])
 
+    const PlaySample = (item) => {
+      if (pm.paused && !muted) { 
+        time = setTimeout(() => {
+          clearTimeout(time);
+          pm = new Audio(item.track.preview_url)
+          pm.play()
+          if ('mediaSession' in navigator) {
+              navigator.mediaSession.metadata = new window.MediaMetadata({
+                  title: '[Preview] ' + item.track.name,
+                  artist: item.track.artists[0].name,
+                  artwork: [
+                      { src: item.track.album.images[0].url, sizes: '500x500' },
+                  ]
+              });
+          }
+        }, 800);
+      }
+    }
    
 
     React.useEffect(() => {
@@ -192,8 +231,23 @@ const Hob = () => {
             </AccordionSummary>
             <AccordionDetails>
             <List className='row'>
+            {muted ? (
+               <ListItem className='col-md-12 mb-3' button onClick={() => setMuted(!muted)}>
+               <ListItemAvatar>
+               <VolumeOffIcon />
+               </ListItemAvatar>
+               <ListItemText primary={(Lang.tag == 'th' ? 'เสียงเพลงถูกปิด' : 'Sound are muted')} />
+             </ListItem>
+            ):(
+              <ListItem className='col-md-12 mb-3' button onClick={() => setMuted(!muted)}>
+              <ListItemAvatar>
+              <VolumeUpIcon />
+              </ListItemAvatar>
+              <ListItemText primary= {(Lang.tag == 'th' ? 'เสียงเพลงถูกเปิดเมื่อมีการเลื่อนไปที่กล่องชื่อเพลงนั้น' : 'Sound are played when hover')} />
+            </ListItem>
+            )}
               {music.length > 0 && music.map((item, i) => (
-                <ListItem className='col-md-4' button>
+                <ListItem className='col-md-4' button onMouseEnter={() => PlaySample(item)} onMouseLeave={() => {pm.pause() ; clearTimeout(time)}}>
                   <ListItemAvatar>
                     <Avatar src={item.track.album.images[0].url} variant={'rounded'} style={{width: 90 , height: 90}} onClick={() => window.open(item.track.artists[0].external_urls.spotify,'blank').focus()} /> 
                   </ListItemAvatar>
