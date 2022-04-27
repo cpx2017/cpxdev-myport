@@ -1,4 +1,5 @@
 {
+    "tag": "en",
     "title": "Hobby and Favorite",
     "title1": "Hobby",
     "title2": "Favorite (Click artist name to view image)",
@@ -39,7 +40,8 @@
             "desc": "The famous 80's band. Altrough now they have only two members"
         }
     ],
+    "musicguide": "Guide: Click/Tap at album artwork to see artist profile or click/tap at song name to listen selected song.",
     "hoblist": "Practice Programming, Ride a Bike, Watching TV",
-    "playlist": "https://open.spotify.com/embed/playlist/4sv3J06OHbF9swzscVMBaO",
+    "playlist": "4sv3J06OHbF9swzscVMBaO",
     "ok": "Close"
 }

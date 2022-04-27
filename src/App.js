@@ -458,7 +458,7 @@ React.useEffect(() => {
                 <Route path="/job" render={() => <Job />} />
                 <Route path="/skill" render={() => <Skill />} />
                 <Route path="/portfolio" render={() => <Portfolio />} />
-                <Route path="/hobby" render={() => <Hobby />} />
+                <Route path="/hobby" render={() => <Hobby feturi={Fet().ul !== '' ? Fet().ul : ''} />} />
                 <Route path="/contact" render={() => <Contact col={formopen} setCol={(val) => setFormOpen({...formopen, contact: val})} />} />
                 <Route path="/vaccinated" render={() => <Vac />} />
                 <Route path="/apidoc" render={() => <ApiDoc col={formopen} setCol={(val) => setFormOpen({...formopen, api: val})} />} />

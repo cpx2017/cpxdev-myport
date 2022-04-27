@@ -10,6 +10,14 @@ import th from '../lang/th/hob.json';
 import Iframe from 'react-iframe'
 import { Dialog } from '@material-ui/core';
 import Fav from '../component/fav'
+import axios from 'axios';
+import Fet from '../fetch'
+
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import Avatar from '@material-ui/core/Avatar';
 
 import Grow from '@material-ui/core/Grow';
 import Slide from '@material-ui/core/Slide';
@@ -60,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
 const Hob = () => {
     const [Lang, setLang] = useState(th);
     const [isOpen, setOpen] = React.useState(false);
+    const [music, setMusic] = React.useState([]);
     const [arr, setArr] = useState( {
       title: "",
       src: "",
@@ -84,6 +93,39 @@ const Hob = () => {
     React.useEffect(() => {
       syncpage();
     });
+
+    React.useEffect(() => {
+      var de = setInterval(function(){ 
+        if (Fet().ul !== '') {
+            clearInterval(de)
+            axios({
+              method: 'post',
+              url: Fet().ul + '/myportsite/spotsync?pid=' + Lang.playlist,
+            }).then(function (response) {
+              setMusic(response.data.res.items)
+          })
+          .catch(function () {
+              // handle error
+          });
+        }
+    }, 1);
+    }, [])
+
+   
+
+    React.useEffect(() => {
+      if (Fet().ul !== '') {
+        axios({
+          method: 'post',
+          url: Fet().ul + '/myportsite/spotsync?pid=' + Lang.playlist,
+        }).then(function (response) {
+          setMusic(response.data.res.items)
+      })
+      .catch(function () {
+          // handle error
+      });
+    }
+    }, [Lang.playlist])
     return (
         <div>
           <Slide direction="right" in={true} timeout={localStorage.getItem('graphic') === null ? 600 : 0}>
@@ -149,7 +191,21 @@ const Hob = () => {
             </Grow>
             </AccordionSummary>
             <AccordionDetails>
-                <Iframe src={Lang.playlist} width="100%" height={380} allowfullscreen allow="encrypted-media"></Iframe>
+            <List className='row'>
+              {music.length > 0 && music.map((item, i) => (
+                <ListItem className='col-md-4' button>
+                  <ListItemAvatar>
+                    <Avatar src={item.track.album.images[0].url} variant={'rounded'} style={{width: 90 , height: 90}} onClick={() => window.open(item.track.artists[0].external_urls.spotify,'blank').focus()} /> 
+                  </ListItemAvatar>
+                  <div className='ml-3'>
+                  <ListItemText primary={item.track.name} secondary={(Lang.tag == 'th' ? 'ร้องโดย ' : 'Song by ') + item.track.artists[0].name} onClick={() => window.open(item.track.external_urls.spotify,'blank').focus()} />
+                  </div>
+                </ListItem>
+              ))}
+              {music.length > 0 && (
+              <Typography className='mt-3 text-muted'>{Lang.musicguide}</Typography>
+              )}
+              </List>
             </AccordionDetails>
           </Accordion>
           
