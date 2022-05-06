@@ -181,7 +181,7 @@ const Hob = ({setP}) => {
     const Notsupport = () => {
       if (!muted) {
         Swal.fire({
-          title: 'Preview song is not support on Tablet or mobile devices',
+          title: localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? 'การเล่นตัวอย่างเพลงไม่สนับสนุนบนอุปกรณ์พกพาหรือโทรศัพท์มือถือ' : 'Preview song is not support on Tablet or mobile devices',
           icon: 'error',
         })
       }
