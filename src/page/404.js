@@ -23,7 +23,10 @@ const useStyles = makeStyles({
       marginBottom: 12,
     },
   });
-const ErrorPage = () => {
+const ErrorPage = ({setP}) => {
+  React.useEffect(() => {
+    setP(localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? 'ไม่พบเพจ' : 'Page not found')
+  }, [])
   const classes = useStyles();
     return ( 
       <Fade in={true} timeout={localStorage.getItem('graphic') === null ? 800 : 0}>

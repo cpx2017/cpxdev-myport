@@ -209,6 +209,8 @@ const bounceTransition = {
 export default function App() {
   const classes = useStyles();
   const [swipe, setSwipe] = React.useState(true);
+
+  const [Page, setP] = React.useState('');
   
   const [formopen, setFormOpen] = React.useState({contact: false, api: false});
 
@@ -228,7 +230,9 @@ export default function App() {
     setSetting(true)
   }
 
-
+  React.useEffect(() => {
+    document.title = Page + " | MyPort [Chinnathorn's online portfolio]"
+  }, [Page])
   const toHome = () => {
     if (formopen.contact === false && formopen.api === false) {
       window.location.href = "/";
@@ -438,31 +442,31 @@ React.useEffect(() => {
                 atActive={bounceTransition.atActive}
                 mapStyles={mapStylespage}
               >
-                <Route exact path="/" render={() => <Home />} />
-                <Route path="/profile" render={() => <Profile />} />
-                <Route path="/education" render={() => <Education />} />
-                <Route path="/job" render={() => <Job />} />
-                <Route path="/skill" render={() => <Skill />} />
-                <Route path="/portfolio" render={() => <Portfolio />} />
-                <Route path="/hobby" render={() => <Hobby />} />
-                <Route path="/contact" render={() => <Contact col={formopen} setCol={(val) => setFormOpen({...formopen, contact: val})} />} />
-                <Route path="/vaccinated" render={() => <Vac />} />
-                <Route path="/apidoc" render={() => <ApiDoc col={formopen} setCol={(val) => setFormOpen({...formopen, api: val})} />} />
-                <Route component={ErrorPage} />
+                <Route exact path="/" render={() => <Home setP={(v) => setP(v)} />} />
+                <Route path="/profile" render={() => <Profile setP={(v) => setP(v)} />} />
+                <Route path="/education" render={() => <Education setP={(v) => setP(v)} />} />
+                <Route path="/job" render={() => <Job setP={(v) => setP(v)} />} />
+                <Route path="/skill" render={() => <Skill setP={(v) => setP(v)} />} />
+                <Route path="/portfolio" render={() => <Portfolio setP={(v) => setP(v)} />} />
+                <Route path="/hobby" render={() => <Hobby setP={(v) => setP(v)} />} />
+                <Route path="/contact" render={() => <Contact setP={(v) => setP(v)} col={formopen} setCol={(val) => setFormOpen({...formopen, contact: val})} />} />
+                <Route path="/vaccinated" render={() => <Vac setP={(v) => setP(v)} />} />
+                <Route path="/apidoc" render={() => <ApiDoc setP={(v) => setP(v)} col={formopen} setCol={(val) => setFormOpen({...formopen, api: val})} />} />
+                <Route render={() => <ErrorPage setP={(v) => setP(v)} />} />
               </AnimatedSwitch>
             ) : (
               <BasicSwitch>
-                <Route exact path="/" render={() => <Home />} />
-                <Route path="/profile" render={() => <Profile />} />
-                <Route path="/education" render={() => <Education />} />
-                <Route path="/job" render={() => <Job />} />
-                <Route path="/skill" render={() => <Skill />} />
-                <Route path="/portfolio" render={() => <Portfolio />} />
-                <Route path="/hobby" render={() => <Hobby feturi={Fet().ul !== '' ? Fet().ul : ''} />} />
-                <Route path="/contact" render={() => <Contact col={formopen} setCol={(val) => setFormOpen({...formopen, contact: val})} />} />
-                <Route path="/vaccinated" render={() => <Vac />} />
-                <Route path="/apidoc" render={() => <ApiDoc col={formopen} setCol={(val) => setFormOpen({...formopen, api: val})} />} />
-                <Route component={ErrorPage} />
+                <Route exact path="/" render={() => <Home setP={(v) => setP(v)} />} />
+                <Route path="/profile" render={() => <Profile setP={(v) => setP(v)} />} />
+                <Route path="/education" render={() => <Education setP={(v) => setP(v)} />} />
+                <Route path="/job" render={() => <Job setP={(v) => setP(v)} />} />
+                <Route path="/skill" render={() => <Skill setP={(v) => setP(v)} />} />
+                <Route path="/portfolio" render={() => <Portfolio setP={(v) => setP(v)} />} />
+                <Route path="/hobby" render={() => <Hobby setP={(v) => setP(v)} feturi={Fet().ul !== '' ? Fet().ul : ''} />} />
+                <Route path="/contact" render={() => <Contact setP={(v) => setP(v)} col={formopen} setCol={(val) => setFormOpen({...formopen, contact: val})} />} />
+                <Route path="/vaccinated" render={() => <Vac setP={(v) => setP(v)} />} />
+                <Route path="/apidoc" render={() => <ApiDoc setP={(v) => setP(v)} col={formopen} setCol={(val) => setFormOpen({...formopen, api: val})} />} />
+                <Route render={() => <ErrorPage setP={(v) => setP(v)} />} />
               </BasicSwitch>
             )}
             <br />

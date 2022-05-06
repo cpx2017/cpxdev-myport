@@ -16,7 +16,11 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-const Home = () => {
+const Home = ({setP}) => {
+  React.useEffect(() => {
+    setP(localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? 'หน้าหลัก' : 'Homepage')
+  }, [])
+
     const classes = useStyles();
     const [Lang, setLang] = useState(th);
     

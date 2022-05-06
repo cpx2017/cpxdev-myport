@@ -15,7 +15,10 @@ import CardContent from '@material-ui/core/CardContent';
 import Slide from '@material-ui/core/Slide';
 import Grow from '@material-ui/core/Grow';
 
-const Hob = () => {
+const Hob = ({setP}) => {
+  React.useEffect(() => {
+    setP(localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? th.title : en.title)
+  }, [])
     const [Lang, setLang] = useState(th);
     const syncpage = () => {
       if (localStorage.getItem('langconfig') !== null) {

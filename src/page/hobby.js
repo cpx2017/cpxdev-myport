@@ -25,6 +25,7 @@ import VolumeOffIcon from '@material-ui/icons/VolumeOff';
 
 import Grow from '@material-ui/core/Grow';
 import Slide from '@material-ui/core/Slide';
+import Swal from 'sweetalert2'
 
 let pm = new Audio();
 let time;
@@ -71,10 +72,13 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: theme.typography.fontWeightRegular,
       }
   }));
-const Hob = () => {
+const Hob = ({setP}) => {
+  React.useEffect(() => {
+    setP(localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? th.title : en.title)
+  }, [])
     const [Lang, setLang] = useState(th);
     const [isOpen, setOpen] = React.useState(false);
-    const [muted, setMuted] = React.useState(false);
+    const [muted, setMuted] = React.useState(localStorage.getItem('mutedsample') != null ? true:false);
     const [music, setMusic] = React.useState([]);
     const [arr, setArr] = useState( {
       title: "",
@@ -100,6 +104,14 @@ const Hob = () => {
     React.useEffect(() => {
       syncpage();
     });
+
+    React.useEffect(() => {
+      if (muted) {
+        localStorage.setItem('mutedsample', true)
+      } else {
+        localStorage.removeItem('mutedsample')
+      }
+    }, [muted])
 
     React.useEffect(() => {
       var de = setInterval(function(){ 
@@ -165,6 +177,16 @@ const Hob = () => {
       });
     }
     }, [Lang.playlist])
+
+    const Notsupport = () => {
+      if (!muted) {
+        Swal.fire({
+          title: 'Preview song is not support on Tablet or mobile devices',
+          icon: 'error',
+        })
+      }
+    }
+
     return (
         <div>
           <Slide direction="right" in={true} timeout={localStorage.getItem('graphic') === null ? 600 : 0}>
@@ -236,18 +258,18 @@ const Hob = () => {
                <ListItemAvatar>
                <VolumeOffIcon />
                </ListItemAvatar>
-               <ListItemText primary={(Lang.tag == 'th' ? 'เสียงเพลงถูกปิด' : 'Sound are muted')} />
+               <ListItemText primary={(Lang.tag == 'th' ? 'ตัวอย่างเพลงถูกปิด' : 'Sound are muted')} />
              </ListItem>
             ):(
               <ListItem className='col-md-12 mb-3' button onClick={() => setMuted(!muted)}>
               <ListItemAvatar>
               <VolumeUpIcon />
               </ListItemAvatar>
-              <ListItemText primary= {(Lang.tag == 'th' ? 'เสียงเพลงถูกเปิดเมื่อมีการเลื่อนไปที่กล่องชื่อเพลงนั้น' : 'Sound are played when hover')} />
+              <ListItemText primary= {(Lang.tag == 'th' ? 'ตัวอย่างเพลงถูกเล่นเมื่อมีการเลื่อนไปที่กล่องชื่อเพลงนั้น' : 'Sound are played when hover')} />
             </ListItem>
             )}
               {music.length > 0 && music.map((item, i) => (
-                <ListItem className='col-md-4' button onMouseEnter={() => PlaySample(item)} onMouseLeave={() => {pm.pause() ; clearTimeout(time)}}>
+                <ListItem className='col-md-4' button onMouseEnter={() => window.innerWidth > 900 ? PlaySample(item) : Notsupport()} onMouseLeave={() => {pm.pause() ; clearTimeout(time)}}>
                   <ListItemAvatar>
                     <Avatar src={item.track.album.images[0].url} variant={'rounded'} style={{width: 90 , height: 90}} onClick={() => window.open(item.track.artists[0].external_urls.spotify,'blank').focus()} /> 
                   </ListItemAvatar>

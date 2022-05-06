@@ -11,7 +11,10 @@ import th from '../lang/th/jobex.json';
 
 import Grow from '@material-ui/core/Grow';
 
-const Job = () => {
+const Job = ({setP}) => {
+  React.useEffect(() => {
+    setP(localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? th.title : en.title)
+  }, [])
     const [Lang, setLang] = useState(th);
 
     const syncpage = () => {

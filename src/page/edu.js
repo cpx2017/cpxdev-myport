@@ -43,7 +43,10 @@ const useStyles = makeStyles((theme) => ({
         height: theme.spacing(6),
       },
   }));
-const Edu = () => {
+const Edu = ({setP}) => {
+  React.useEffect(() => {
+    setP(localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? th.title : en.title)
+  }, [])
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
     const [Lang, setLang] = useState(th);

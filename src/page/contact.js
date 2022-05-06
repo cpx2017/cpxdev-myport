@@ -25,7 +25,10 @@ const useStyles = makeStyles((theme) => ({
       }
   }));
 
-const Hob = ({col, setCol}) => {
+const Hob = ({col, setCol,setP}) => {
+  React.useEffect(() => {
+    setP(localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? th.title : en.title)
+  }, [])
   const Refreshdetect = (e) => {
     if (col.contact === true) {
       e.preventDefault();

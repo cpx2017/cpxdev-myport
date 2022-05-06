@@ -46,7 +46,10 @@ function TabPanel(props) {
     },
   }));
   
-  const ApiDoc = ({col, setCol}) => {
+  const ApiDoc = ({col, setCol,setP}) => {
+    React.useEffect(() => {
+      setP(localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? 'บริการ API' : 'API Service')
+    }, [])
     const Refreshdetect = (e) => {
       if (col.api === true) {
         e.preventDefault();

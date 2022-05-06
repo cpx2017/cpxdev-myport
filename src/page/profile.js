@@ -18,7 +18,10 @@ const useStyles = makeStyles((theme) => ({
       height: theme.spacing(30),
     }
   }));
-const Profile = () => {
+const Profile = ({setP}) => {
+  React.useEffect(() => {
+    setP(localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? th.title : en.title)
+  }, [])
     const [Lang, setLang] = useState(th);
     const classes = useStyles();
 

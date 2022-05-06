@@ -27,7 +27,10 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-const Skill = () => {
+const Skill = ({setP}) => {
+  React.useEffect(() => {
+    setP(localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? th.title : en.title)
+  }, [])
     const [Lang, setLang] = useState(th);
 
     const syncpage = () => {
