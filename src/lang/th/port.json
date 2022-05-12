@@ -33,7 +33,6 @@
         {
             "title": "ระบบจัดการแบบสำรวจ",
             "group": "React JS with Node JS.",
-
             "desc": "เป็นระบบสำหรับจัดการแบบสำรวจสำหรับองค์กร มีรูปแบบคำถามที่หลากหลายและใช้งานง่าย และมีประสิทธิภาพด้วย React JS พร้อมกับการทำงานร่วมกับระบบหลังบ้าน NodeJS",
             "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-5.webp",
             "link": ""
