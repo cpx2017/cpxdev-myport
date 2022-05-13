@@ -28,7 +28,7 @@
             "group": ".NET Core MVC E-Commerce Web app",
             "desc": "เป็นเว็บไซต์รับจองสินค้าสั่งล่วงหน้า โดยมีการ Migrate จาก PreOrder System ที่แต่เดิมใช้ .NET framework เป็น .NET Core 3.1 และรองรับการ Deploy ผ่าน Docker Container และระบบหน้าร้านใช้ React JS เพื่อให้เกิดลูกเล่นที่ทันสมัยและน่าสนใจ ในขณะที่ประสิทธิภาพดีกว่าเดิม ระบบฐานข้อมูลรองรับทั้ง MySQL และ SQL Server",
             "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-4.webp",
-            "link": "https://preorderplatreact.azurewebsites.net/"
+            "link": "https://preorderplatform.cpxdev.tk"
         },
         {
             "title": "ระบบจัดการแบบสำรวจ",
