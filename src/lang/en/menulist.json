@@ -21,7 +21,7 @@
     "about": {
         "head": "About MyPort Website and Public API",
         "developName": "Developed by Chinnathorn Promnaruritr",
-        "desc": "MyPort Website is Chinnathorn's online Portfolio. It's design on React JS framework (Operated by Vercel) and run undered by ASP.Net Core 3.1 Web API. I use Microsoft Azure to hosted backend and Google firebase to hosted React JS static site. We also have Public API called 'MyPort API' to access our contents similiar this site focused.",
+        "desc": "MyPort Website is Chinnathorn's online Portfolio. It's design on React JS framework (Operated by Netlify)  and run undered by ASP.Net Core 3.1 Web API. We also have Public API called 'MyPort API' to access our contents similiar this site focused.",
         "uptLog": "Update description: Minor Bug fixed."
     },
     "setting": {
