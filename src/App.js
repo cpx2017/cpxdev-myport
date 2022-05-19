@@ -28,7 +28,7 @@ import {
   Slide,
 } from '@material-ui/core';
 import {
-  BrowserRouter,
+  useHistory,
   Route,
   Link,
   Switch as BasicSwitch,
@@ -100,6 +100,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    cursor: 'pointer'
   },
   inputRoot: {
     color: 'inherit',
@@ -222,6 +223,7 @@ export default function App() {
   const [setting, setSetting] = React.useState(false);
 
   const [changetoThai, setRecommend] = React.useState(false);
+  const history = useHistory()
   
   const [Lang, setLang] = React.useState(th);
 
@@ -233,9 +235,10 @@ export default function App() {
   React.useEffect(() => {
     document.title = Page + " | MyPort [Chinnathorn's online portfolio]"
   }, [Page])
+
   const toHome = () => {
     if (formopen.contact === false && formopen.api === false) {
-      window.location.href = "/";
+      history.push('/');
     }
   }
 
@@ -333,7 +336,6 @@ React.useEffect(() => {
   return (
     <div>
    <div className={classes.root}>
-        <BrowserRouter>
           <Drawer
             className={classes.drawer}
             variant="temporary"
@@ -471,7 +473,6 @@ React.useEffect(() => {
             )}
             <br />
           </main>
-        </BrowserRouter>
         <Slide in={localStorage.getItem('graphic') === null ? !open : true} direction='down' timeout={600}>
           <AppBar
             color="primary"
@@ -491,7 +492,7 @@ React.useEffect(() => {
               <div style={{ paddingRight: 20 }}>
                 <Avatar alt="myavatar" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/avatar.webp" />
               </div>
-              <a href=" " onClick={() => toHome()} className={classes.title}>
+              <a onClick={() => toHome()} className={classes.title}>
                 <Typography variant="h6" noWrap>
                   Chinnathorn's MyPort
                 </Typography>

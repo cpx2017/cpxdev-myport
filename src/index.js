@@ -6,11 +6,19 @@ import '@fontsource/mitr';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './theme';
+import {
+  BrowserRouter,
+  Route,
+  Link,
+  Switch as BasicSwitch,
+} from "react-router-dom";
 
 ReactDOM.render(
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>,
+  <BrowserRouter>
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
