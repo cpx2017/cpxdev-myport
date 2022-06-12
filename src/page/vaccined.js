@@ -35,7 +35,6 @@ const Hob = ({setP}) => {
     const getvac = {
         set: true,
         url1: "http://bit.ly/3r35M80",
-        url2: "http://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/Vaccinated.pdf"
     }
 
     return (
@@ -61,7 +60,6 @@ const Hob = ({setP}) => {
                     {getvac.set === true && (
                       <ButtonGroup>
                         <Button color="primary" variant="contained" target="_blank" href={getvac.url1}>{Lang.done.btndigital}</Button>
-                        <Button color="primary" variant="contained" target="_blank" href={'https://docs.google.com/viewer?url=' + getvac.url2} download='Vaccinated.pdf'>{Lang.done.btnplain}</Button>
                       </ButtonGroup>
                     )}
                 </CardContent>

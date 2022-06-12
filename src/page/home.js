@@ -38,84 +38,23 @@ const Home = ({setP}) => {
 
     React.useEffect(() => {
       syncpage();
+      setReady(true)
     });
     return ( 
-        <div>
-          {window.innerWidth > 600 ? (
-            <div>
-              <Backdrop className={classes.loader} open={!Ready} transitionDuration={400}>
-                <img src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/main/cpx-circular.svg" width="70px" alt="load" />
-                    <br />
-                    <Typography variant="h6">{Lang.load}</Typography>
-                  </Backdrop>
-              <Grid container spacing={2}>
-                <Slide direction="right" in={Ready} timeout={localStorage.getItem('graphic') === null ? 600 : 0}>
-                <Grid item xs={12} md={7}>
-                  <Carousel
-                      navButtonsAlwaysInvisible={true}
-                      showThumbs={true}
-                      stopAutoPlayOnHover={false}
-                      interval={7000}
-                  >
-                      {
-                          Lang.slide.map((item, i) => (
-                             <BillCom key={i} item={item} i={i} classes={classes} />
-                          ))
-                      }
-                  </Carousel>
-                </Grid>
-                </Slide>
-                <Grow in={Ready} timeout={localStorage.getItem('graphic') === null ? 800 : 0}>
-                   <Grid item xs={12} md={5}>
-                     <Card>
-                        <CardActionArea>
-                          <br/>
-                          <Typography className='ml-4' variant="h6">&nbsp;{Lang.covid}</Typography>
-                          <hr />
-                          <CardContent>
-                            <Covid Lang={Lang} setReady={(val) => setReady(val)} /> 
-                          </CardContent>
-                        </CardActionArea>
-                      </Card>
-                  </Grid>
-                </Grow>
-              </Grid>
-            </div>
-          ) : (
-            <Grid container spacing={2}>
-              <Grow in={true} timeout={localStorage.getItem('graphic') === null ? 600 : 0}>
-                <Grid item xs={12} md={7}>
-                  <Carousel
-                      navButtonsAlwaysInvisible={true}
-                      showThumbs={true}
-                      stopAutoPlayOnHover={false}
-                      interval={7000}
-                  >
-                      {
-                          Lang.slide.map((item, i) => (
-                            <BillCom slideInc={Lang.slideInc} key={i} item={item} i={i} classes={classes} />
-                          ))
-                      }
-                  </Carousel>
-                </Grid>
-              </Grow>
-              <Grow in={true} timeout={localStorage.getItem('graphic') === null ? 800 : 0}>
-              <Grid item xs={12} md={5}>
-                <Card>
-                      <CardActionArea>
-                        <br/>
-                        <Typography variant="h6">&nbsp;{Lang.covid}</Typography>
-                        <hr />
-                        <CardContent>
-                          <Covid Lang={Lang} setReady={(val) => setReady(val)} /> 
-                        </CardContent>
-                      </CardActionArea>
-                    </Card>
-                </Grid>
-              </Grow>
-            </Grid>
-          )}
-        </div>
+      <Grow in={Ready} timeout={localStorage.getItem('graphic') === null ? 1000 : 0}>
+      <Carousel
+          navButtonsAlwaysInvisible={true}
+          showThumbs={true}
+          stopAutoPlayOnHover={false}
+          interval={7000}
+      >
+          {
+              Lang.slide.map((item, i) => (
+                 <BillCom key={i} item={item} i={i} classes={classes} />
+              ))
+          }
+      </Carousel>
+    </Grow>
      );
 }
  

@@ -228,7 +228,7 @@ export default function App() {
   const [Lang, setLang] = React.useState(th);
 
   const settingDialog = () => {
-    Lat(Fet().ul).then(setLat)
+    Lat(Fet().ul + '/home/status').then(setLat)
     setSetting(true)
   }
 
@@ -473,7 +473,7 @@ React.useEffect(() => {
             )}
             <br />
           </main>
-        <Slide in={localStorage.getItem('graphic') === null ? !open : true} direction='down' timeout={600}>
+        <Slide in={true} direction='down' timeout={600}>
           <AppBar
             color="primary"
             position="fixed"
@@ -586,20 +586,12 @@ React.useEffect(() => {
               label={Lang.reduce}
             />
           </Tooltip>
-          <Tooltip enterDelay={1000} title={Lang.settingGuide.cReg}>
-          <ListItem button>
-            <ListItemIcon>
-              <PublicIcon />
-            </ListItemIcon>
-            <ListItemText primary={Lang.setting.cReg} secondary={Fet().nme} />
-          </ListItem>
-          </Tooltip>
           <Tooltip enterDelay={1000} title={Lang.settingGuide.cLat}>
-          <ListItem>
+          <ListItem button onClick={() => window.open('https://s.cpxdev.tk/st', '_target')}>
             <ListItemIcon>
               <NetworkCheckIcon />
             </ListItemIcon>
-            <ListItemText primary="Latency (ms.)" secondary={savedLat} />
+            <ListItemText primary="System Status" secondary={savedLat > 0 && savedLat <= 40 ? 'Great' : savedLat > 40 && savedLat <= 80 ? 'Good' : 'Bad'} />
           </ListItem>
           </Tooltip>
             </DialogContentText>

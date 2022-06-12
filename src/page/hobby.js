@@ -5,10 +5,11 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import en from '../lang/en/hob.json';
 import th from '../lang/th/hob.json';
 import Iframe from 'react-iframe'
-import { Dialog } from '@material-ui/core';
+import { Button, Dialog, DialogContent, LinearProgress } from '@material-ui/core';
 import Fav from '../component/fav'
 import axios from 'axios';
 import Fet from '../fetch'
@@ -78,7 +79,6 @@ const Hob = ({setP}) => {
   }, [])
     const [Lang, setLang] = useState(th);
     const [isOpen, setOpen] = React.useState(false);
-    const [muted, setMuted] = React.useState(localStorage.getItem('mutedsample') != null ? true:false);
     const [music, setMusic] = React.useState([]);
     const [arr, setArr] = useState( {
       title: "",
@@ -86,6 +86,7 @@ const Hob = ({setP}) => {
       vdo: "",
       desc: ""
     })
+    const [sam, setSample] = React.useState(null);
       const [expanded, setExpanded] = React.useState(false);
 
       const handleChange = (panel) => (event, isExpanded) => {
@@ -105,13 +106,6 @@ const Hob = ({setP}) => {
       syncpage();
     });
 
-    React.useEffect(() => {
-      if (muted) {
-        localStorage.setItem('mutedsample', true)
-      } else {
-        localStorage.removeItem('mutedsample')
-      }
-    }, [muted])
 
     React.useEffect(() => {
       var de = setInterval(function(){ 
@@ -144,28 +138,11 @@ const Hob = ({setP}) => {
     }, 1);
     }, [])
 
-    const PlaySample = (item) => {
-      if (pm.paused && !muted) { 
-        time = setTimeout(() => {
-          clearTimeout(time);
-          pm = new Audio(item.track.preview_url)
-          pm.play()
-          if ('mediaSession' in navigator) {
-              navigator.mediaSession.metadata = new window.MediaMetadata({
-                  title: '[Preview] ' + item.track.name,
-                  artist: item.track.artists[0].name,
-                  artwork: [
-                      { src: item.track.album.images[0].url, sizes: '500x500' },
-                  ]
-              });
-          }
-        }, 800);
-      }
-    }
    
 
     React.useEffect(() => {
       if (Fet().ul !== '') {
+        setMusic([])
         axios({
           method: 'post',
           url: Fet().ul + '/myportsite/spotsync?pid=' + Lang.playlist,
@@ -178,13 +155,9 @@ const Hob = ({setP}) => {
     }
     }, [Lang.playlist])
 
-    const Notsupport = () => {
-      if (!muted) {
-        Swal.fire({
-          title: localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? 'การเล่นตัวอย่างเพลงไม่สนับสนุนบนอุปกรณ์พกพาหรือโทรศัพท์มือถือ' : 'Preview song is not support on Tablet or mobile devices',
-          icon: 'error',
-        })
-      }
+    const Preview = (id, url) => {
+      setSample(music.filter(x => x.track.id == id)[0])
+      console.log(music.filter(x => x.track.id == id)[0])
     }
 
     return (
@@ -253,33 +226,17 @@ const Hob = ({setP}) => {
             </AccordionSummary>
             <AccordionDetails>
             <List className='row'>
-            {muted ? (
-               <ListItem className='col-md-12 mb-3' button onClick={() => setMuted(!muted)}>
-               <ListItemAvatar>
-               <VolumeOffIcon />
-               </ListItemAvatar>
-               <ListItemText primary={(Lang.tag == 'th' ? 'ตัวอย่างเพลงถูกปิด' : 'Sound are muted')} />
-             </ListItem>
-            ):(
-              <ListItem className='col-md-12 mb-3' button onClick={() => setMuted(!muted)}>
-              <ListItemAvatar>
-              <VolumeUpIcon />
-              </ListItemAvatar>
-              <ListItemText primary= {(Lang.tag == 'th' ? 'ตัวอย่างเพลงถูกเล่นเมื่อมีการเลื่อนไปที่กล่องชื่อเพลงนั้น' : 'Sound are played when hover')} />
-            </ListItem>
-            )}
-              {music.length > 0 && music.map((item, i) => (
-                <ListItem className='col-md-4' button onMouseEnter={() => window.innerWidth > 900 ? PlaySample(item) : Notsupport()} onMouseLeave={() => {pm.pause() ; clearTimeout(time)}}>
+              {music.length > 0 ? music.map((item, i) => (
+                <ListItem className='col-md-4' key={item.track.id} button onClick={() => Preview(item.track.id, item.track.external_urls.spotify)}>
                   <ListItemAvatar>
-                    <Avatar src={item.track.album.images[0].url} variant={'rounded'} style={{width: 90 , height: 90}} onClick={() => window.open(item.track.artists[0].external_urls.spotify,'blank').focus()} /> 
+                    <Avatar src={item.track.album.images[0].url} variant={'rounded'} style={{width: 90 , height: 90}} /> 
                   </ListItemAvatar>
                   <div className='ml-3'>
-                  <ListItemText primary={item.track.name} secondary={(Lang.tag == 'th' ? 'ร้องโดย ' : 'Song by ') + item.track.artists[0].name} onClick={() => window.open(item.track.external_urls.spotify,'blank').focus()} />
+                  <ListItemText primary={item.track.name} secondary={(Lang.tag == 'th' ? 'ร้องโดย ' : 'Song by ') + item.track.artists[0].name} />
                   </div>
                 </ListItem>
-              ))}
-              {music.length > 0 && (
-              <Typography className='mt-3 text-muted'>{Lang.musicguide}</Typography>
+              )) : (
+                <LinearProgress color="secondary" />
               )}
               </List>
             </AccordionDetails>
@@ -301,6 +258,52 @@ const Hob = ({setP}) => {
               Lang={Lang}
               classes={classes}
             />
+          </Dialog>
+          <Dialog
+            TransitionComponent={Grow}
+            transitionDuration={localStorage.getItem('graphic') === null ? 500 : 200}
+            open={sam != null ? true : false}
+            onClose={() => setSample(null)}
+            maxWidth="xl"
+            scroll={'paper'}
+            aria-labelledby="scroll-dialog-title"
+            aria-describedby="scroll-dialog-description"
+          >
+            {
+              sam != null && (
+                <>
+               <DialogContent dividers>
+                <div className='row'>
+                  <div className='col-md-5'>
+                    <img src={sam.track.album.images[0].url} width='100%' />
+                  </div>
+                  <div className='col-md mt-3'>
+                  <Typography variant='h5'>
+                   {Lang.musicguide.title + sam.track.name}
+                 </Typography>
+                 <Typography variant='subtitle1'>
+                 {Lang.musicguide.art + sam.track.artists[0].name} 
+                 </Typography>
+                 <hr/>
+                 <Typography variant='body1'>
+                 {Lang.musicguide.album}"{sam.track.album.name}"
+                 </Typography>
+                 <Typography variant='caption'>
+                 {Lang.musicguide.released + new Date(sam.track.album.release_date).toDateString()} 
+                 </Typography>
+                 <br />
+                 <Button variant='outlined' className='mt-3 text-success' onClick={() => window.open(sam.track.external_urls.spotify,'blank').focus()}>{Lang.musicguide.spot}</Button>
+                 <br />
+                 <audio className='mt-5' controls>
+                    <source src={sam.track.preview_url} />
+                    Your browser does not support the audio tag.
+                  </audio>
+                  </div>
+                </div>
+                 </DialogContent>
+                </>
+              )
+            }
           </Dialog>
         </div>
      );

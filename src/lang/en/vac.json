@@ -35,8 +35,7 @@
     },
     "allstat": "Booster vaccinated (Third Dose)",
     "done": {
-        "btndigital": "View Certification",
-        "btnplain": "Download Certification"
+        "btndigital": "View or Download Certification"
     },
     "credit": "Reference: Mor-Promt Application, Ministry of Public Health Thailand"
 }

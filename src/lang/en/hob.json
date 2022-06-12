@@ -40,7 +40,13 @@
             "desc": "The famous 80's band. Altrough now they have only two members"
         }
     ],
-    "musicguide": "Guide: Click/Tap at album artwork to see artist profile or click/tap at song name to listen selected song.",
+    "musicguide": {
+        "title": "Song name: ",
+        "art": "Artist: ",
+        "album": "Song from album ",
+        "released": "Released in ",
+        "spot": "Listening on Spotify"
+    },
     "hoblist": "Practice Programming, Ride a Bike, Watching TV",
     "playlist": "4sv3J06OHbF9swzscVMBaO",
     "ok": "Close"
