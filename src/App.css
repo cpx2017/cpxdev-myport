@@ -84,3 +84,9 @@ a {
   border-bottom-right-radius: 18px !important;
   border-bottom-left-radius: 18px !important;
 }
+
+.fixedbottom{
+  position: sticky;
+    bottom: 0;
+    z-index: 1071;
+}

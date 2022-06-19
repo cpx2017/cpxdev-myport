@@ -6,6 +6,7 @@ import Switch from '@material-ui/core/Switch';
 import axios from 'axios';
 import {
   AppBar,
+  Hidden,
   Drawer,
   Toolbar,
   IconButton,
@@ -26,6 +27,7 @@ import {
   FormControlLabel,
   Tooltip,
   Slide,
+  CssBaseline
 } from '@material-ui/core';
 import {
   useHistory,
@@ -93,10 +95,13 @@ const langlist = [
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    display: 'flex',
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    },
   },
   title: {
     flexGrow: 1,
@@ -138,8 +143,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
   },
   drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
+    [theme.breakpoints.up('sm')]: {
+      width: drawerWidth,
+      flexShrink: 0,
+    },
   },
   drawerPaper: {
     width: drawerWidth,
@@ -155,11 +162,6 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: -drawerWidth,
   },
   contentShift: {
     transition: theme.transitions.create('margin', {
@@ -336,6 +338,8 @@ React.useEffect(() => {
   return (
     <div>
    <div className={classes.root}>
+   <nav className={classes.drawer} aria-label="mailbox folders">
+   <Hidden smUp implementation="css">
           <Drawer
             className={classes.drawer}
             variant="temporary"
@@ -433,8 +437,132 @@ React.useEffect(() => {
               <ListItemText primary={Lang.menu.abo} />
             </ListItem>
           </Drawer>
-          
-          <main onClick={() => allclose()}>
+    </Hidden>
+   <Hidden xsDown implementation="css">
+          <Drawer
+            className={classes.drawer}
+            variant="permanent"
+            color="primary"
+            anchor="left"
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            open
+          >
+          <div className={classes.drawerHeader} position="fixed">
+         
+          </div>
+          <Divider />
+          <ListItem component={Link} to='/' button>
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText primary={Lang.menu.home} />
+          </ListItem>
+          <ListItem component={Link} to='/profile' button>
+            <ListItemIcon>
+              <AccountCircleIcon />
+            </ListItemIcon>
+            <ListItemText primary={Lang.menu.pro} />
+          </ListItem>
+          <ListItem component={Link} to='/education' button>
+          <ListItemIcon>
+                <SchoolIcon />
+              </ListItemIcon>
+              <ListItemText primary={Lang.menu.edu} />
+            </ListItem>
+            <ListItem component={Link} to='/job' button>
+              <ListItemIcon>
+                <WorkIcon />
+              </ListItemIcon>
+              <ListItemText primary={Lang.menu.job} />
+            </ListItem>
+            <ListItem component={Link} to='/skill' button>
+              <ListItemIcon>
+                <ComputerIcon />
+              </ListItemIcon>
+              <ListItemText primary={Lang.menu.skill} />
+            </ListItem>
+            <ListItem component={Link} to='/portfolio' button>
+              <ListItemIcon>
+                <BookIcon />
+              </ListItemIcon>
+              <ListItemText primary={Lang.menu.port} />
+            </ListItem>
+            <ListItem component={Link} to='/hobby' button>
+              <ListItemIcon>
+                <NaturePeopleIcon />
+              </ListItemIcon>
+              <ListItemText primary={Lang.menu.hobby} />
+            </ListItem>
+            <ListItem component={Link} to='/vaccinated' button>
+              <ListItemIcon>
+                <HealingIcon />
+              </ListItemIcon>
+              <ListItemText primary={Lang.menu.vac} />
+            </ListItem>
+            <ListItem component={Link} to='/contact' button>
+              <ListItemIcon>
+                <ContactSupportIcon />
+              </ListItemIcon>
+              <ListItemText primary={Lang.menu.call} />
+            </ListItem>
+            <Divider />
+            <ListItem button component={Link} to='/apidoc'>
+              <ListItemIcon>
+                <DeveloperModeIcon />
+              </ListItemIcon>
+              <ListItemText primary={Lang.menu.api} />
+            </ListItem>
+            <ListItem component="a" target="_blank" href="https://www.dropbox.com/sh/gsapue86tjk17yh/AACpfja9C2uEfbwRIpLaR0VNa?dl=0" button>
+              <ListItemIcon>
+                <InsertDriveFileIcon />
+              </ListItemIcon>
+              <ListItemText primary={Lang.menu.doclib} />
+            </ListItem>
+            <ListItem button onClick={() => settingDialog()}>
+              <ListItemIcon>
+                <SettingsIcon />
+              </ListItemIcon>
+              <ListItemText primary={Lang.menu.set} />
+            </ListItem>
+            <ListItem button onClick={() => setApiOpen(true)}>
+              <ListItemIcon>
+                <InfoIcon />
+              </ListItemIcon>
+              <ListItemText primary={Lang.menu.abo} />
+            </ListItem>
+          </Drawer>
+    </Hidden>
+    <Slide in={true} direction='down' timeout={600}>
+          <AppBar
+            color="primary"
+            position="fixed"
+            variant="persistent"
+            className={classes.appBar + ' app-barcurve'}
+          >
+            <Toolbar>
+            <IconButton
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}
+                edge="start"
+                className={clsx(classes.menuButton, open && classes.hide)}
+                size="large">
+                <MenuIcon />
+              </IconButton>
+              <div style={{ paddingRight: 20 }}>
+                <Avatar alt="myavatar" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/avatar.webp" />
+              </div>
+              <a onClick={() => toHome()} className={classes.title}>
+                <Typography variant="h6" noWrap>
+                  Chinnathorn's MyPort
+                </Typography>
+              </a>
+            </Toolbar>
+          </AppBar>
+        </Slide>
+    </nav>
+          <main onClick={() => allclose()} className={classes.content}>
             <div className={classes.drawerHeader} />
             <br />
             {localStorage.getItem('graphic') === null ? (
@@ -473,34 +601,8 @@ React.useEffect(() => {
             )}
             <br />
           </main>
-        <Slide in={true} direction='down' timeout={600}>
-          <AppBar
-            color="primary"
-            position="fixed"
-            variant="persistent"
-            className={classes.appBar + ' app-barcurve'}
-          >
-            <Toolbar>
-            <IconButton
-                aria-label="open drawer"
-                onClick={handleDrawerOpen}
-                edge="start"
-                className={clsx(classes.menuButton, open && classes.hide)}
-                size="large">
-                <MenuIcon />
-              </IconButton>
-              <div style={{ paddingRight: 20 }}>
-                <Avatar alt="myavatar" src="https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/avatar.webp" />
-              </div>
-              <a onClick={() => toHome()} className={classes.title}>
-                <Typography variant="h6" noWrap>
-                  Chinnathorn's MyPort
-                </Typography>
-              </a>
-            </Toolbar>
-          </AppBar>
-        </Slide>
-        <footer>
+      </div>
+      <footer className='fixedbottom bg-light'>
           <hr />
           <Typography variant="body1" align="center">
             &copy; Copyright {new Date().getFullYear()} - Chinnathorn Promnaruritr, Allright Reserved
@@ -633,7 +735,6 @@ React.useEffect(() => {
             </Button>
           </DialogActions>
         </Dialog>
-      </div>
     </div>
   );
 }

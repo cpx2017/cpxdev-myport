@@ -48,7 +48,7 @@ const Edu = ({setP}) => {
     setP(localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? th.title : en.title)
   }, [])
     const classes = useStyles();
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = React.useState('panel1');
     const [Lang, setLang] = useState(th);
   
     const handleChange = (panel) => (event, isExpanded) => {

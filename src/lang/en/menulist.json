@@ -22,7 +22,7 @@
         "head": "About MyPort Website and Public API",
         "developName": "Developed by Chinnathorn Promnaruritr",
         "desc": "MyPort Website is Chinnathorn's online Portfolio. It's design on React JS framework (Operated by Netlify)  and run undered by ASP.Net Core 3.1 Web API. We also have Public API called 'MyPort API' to access our contents similiar this site focused.",
-        "uptLog": "Update description: UI improve and minor Bug fixed."
+        "uptLog": "Update description: New Layout is beta."
     },
     "setting": {
         "changeL": "Select language",

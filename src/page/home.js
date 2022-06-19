@@ -46,6 +46,7 @@ const Home = ({setP}) => {
           navButtonsAlwaysInvisible={true}
           showThumbs={true}
           stopAutoPlayOnHover={false}
+          width='400px'
           interval={7000}
       >
           {
