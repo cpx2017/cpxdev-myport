@@ -19,7 +19,7 @@
         {
             "title": "Telesis Marking Control Software System",
             "group": "VB.Net Desktop App",
-            "desc": "Send data and marking controller software for TMC 470 Marking Controller to marking Chassis (Part of Vehicle) reason in vehicle industrial company ex. CML. (Capital Manufacuing Limited of RMA Group which production of vehicle brand 'Ford' in Myanmar and Thailand.) This software is developed in VB.Net language and worked with MySQL database and send data to Controller via RS232 Cable (Serialport).",
+            "desc": "Send data and marking controller software for Marking Controller to marking Chassis (Part of Vehicle) reason in vehicle industrial company. This software is developed in VB.Net language and worked with MySQL database and send data to Controller via RS232 Cable (Serialport).",
             "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-3.webp",
             "link": ""
         },
