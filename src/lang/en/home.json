@@ -1,0 +1,35 @@
+{
+    "title": "Homepage",
+    "load": "Loading, please wait",
+    "slide": [
+        {
+            "title": "Hi! I'm Chinnathorn.",
+            "desc": "I'm a Junior Programmer who find new experience and improve more skill.",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@latest/myport/Background.webp"
+        },
+        {
+            "title": "I'm a New-Gen Web Developer.",
+            "desc": "All developers are different skill and learning knowledge. But same thing is loving coding and work hard for developing job.",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@latest/myport/Background1.webp"
+        }
+    ],
+    "covid": "Daily Covid-19 Cases Report",
+    "covidmap": "View covid-19 World map statistic",
+    "coviddata": [
+        {
+            "detail": "New cases today",
+            "overall": "Overall",
+            "unit": "person(s)"
+        },
+        {
+            "detail": "Recovered today",
+            "overall": "Overall",
+            "unit": "person(s)"
+        },
+        {
+            "detail": "Death cases today",
+            "overall": "Overall",
+            "unit": "person(s)"
+        }
+    ]
+}

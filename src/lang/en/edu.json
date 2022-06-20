@@ -1,0 +1,21 @@
+{
+    "title": "Education History",
+    "list": [
+        {
+            "panel": "panel1",
+            "title": "Bachelor Degree - Business Computer, Faculty of management Science",
+            "locate": "Dhonburi Rajabhat University, Thon Buri, Bangkok, TH",
+            "edulogo": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/DRU.gif",
+            "desc": "Description: I started to learn Basic programming in freshy (Year 1). AndBasic computer knowledge and business management.",
+            "gpa": 2.96
+        },
+        {
+            "panel": "panel2",
+            "title": "High School - Math-English, Bilingual Program",
+            "locate": "Sarasas Wited Bangbon School, Bangbon, Bangkok, TH",
+            "edulogo": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/SWB.gif",
+            "desc": "Description: I learnt both Thai and English Subject. And I focused in main subject like Math and English subjects.",
+            "gpa": 1.87
+        }
+    ]
+}

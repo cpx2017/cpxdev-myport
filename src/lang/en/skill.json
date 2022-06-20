@@ -1,0 +1,54 @@
+{
+    "title": "Developer Skill",
+    "list": [
+        {
+            "title": "HTML CSS, Javascript and JQuery",
+            "group": "Front-End framework",
+            "desc": "I can design and develop front-end User interface with HTML, CSS and web animation with javascript and JQuery.",
+            "learnrate": [2,2,2,2,0],
+            "color": "primary"
+        },
+        {
+            "title": "ASP.NET MVC VB.Net/C#",
+            "group": "Back-End framework",
+            "desc": "Able to develop .NET Framework (VB.Net ASP.Net MVC) web Back-End and communicate to database. (Both SQL Server and MySQL).",
+            "learnrate": [2,2,2,1,0],
+            "color": "secondary"
+        },
+        {
+            "title": "ASP.NET CORE MVC",
+            "group": "Back-End framework",
+            "desc": "I can develop new-generation and cross origin supported API back-end web application with .NET Core framework",
+            "learnrate": [2,2,2,0,0],
+            "color": "secondary"
+        },
+        {
+            "title": "SQL Server, MySQL",
+            "group": "Database Tool",
+            "desc": "Able to Basic SQL Query command (Create/Delete Table and Insert/Update/Delete records from table) great. And Alter table, Store procedured and join table basically.",
+            "learnrate": [2,2,2,0,0],
+            "color": "secondary"
+        },
+        {
+            "title": "React JS",
+            "group": "Front-End framework",
+            "desc": "I can design SPA (Single Page web Application) user interface with React JS in basic level.",
+            "learnrate": [2,2,1,0,0],
+            "color": "primary"
+        },
+        {
+            "title": "Microsoft Office",
+            "group": "Another Skill",
+            "desc": "I can use microsoft office software in basic level. Liked Word, Excel or powerpoint.",
+            "learnrate": [2,2,0,0,0],
+            "color": "error"
+        },
+        {
+            "title": "Another programming/IT skill",
+            "group": "Another Skill",
+            "desc": "Some IT knowledge, I need to learn it more to understand.",
+            "learnrate": [2,1,0,0,0],
+            "color": "error"
+        }
+    ]
+}

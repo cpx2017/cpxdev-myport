@@ -1,0 +1,59 @@
+{
+    "tag": "th",
+    "title": "งานอดิเรกและสิ่งที่ชอบ",
+    "title1": "งานอดิเรก",
+    "title2": "สิ่งที่ชอบ (คลิกที่ชื่อศิลปินเพื่อดูรูปภาพ)",
+    "title3": "เพลงที่ชื่นชอบ (เพลย์ลิสต์โดย Spotify)",
+    "live": {
+        "title": "ชื่อเพลง",
+        "artist": "ศิลปิน",
+        "time": "วันเวลาที่อัปเดต",
+        "play": "เรากำลังฟังเพลงนี้อยู่",
+        "pause": "ขอเวลาเลือกเพลงสักครู่",
+        "err": "พบข้อผิดพลาดเล็กน้อย",
+        "off": "เดี๋ยวจะกลับมาในอีกไม่ช้า",
+        "will": "เดี๋ยวเราจะกลับมา"
+    },
+    "favlist": [
+        {
+            "title": "บี้ เดอะสกา",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/fav/theska.webp",
+            "link": "//www.youtube.com/c/bietheska",
+            "desc": "หนึ่งในผู้บุกเบิกวงการคอนแทนต์ครีเอเตอร์คนแรกๆของไทย การันตีด้วยผู้ติดตามมากกว่าสิบล้านคน"
+        },
+        {
+            "title": "อีปิกไทม์ (Epic Time)",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/fav/epictime.webp",
+            "link": "//www.youtube.com/c/EpicToys",
+            "desc": "คอนเทนต์ครีเอเตอร์เจ้าของเดียวกับ Bie The Ska ที่มีความหลากหลายและความสนุก"
+        },
+        {
+            "title": "บีเอ็นเคโฟตี้เอต (BNK48)",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/fav/bnk48.webp",
+            "link": "//www.youtube.com/c/BNK48OfficialYouTubeChannel",
+            "desc": "ไอดอลเกิร์ลกรุ๊ปที่มีชื่อเสียงและจำนวนสมาชิกมากที่สุดในไทย เจ้าของเพลงในตำนานอย่าง \"Koisuru Fortune Cookie\" (คุกกี้เสี่ยงทาย) และล่าสุดกับเพลงซิงเกิ้ลที่ 11 \"Sayonara Crawl\""
+        },
+        {
+            "title": "ไวร่า (VYRA)",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/fav/vyra.webp",
+            "link": "//www.youtube.com/c/OfficiallyVyra",
+            "desc": "การเดินทางอย่างต่อเนื่องจากเดิมในนามของ LYRA สู่สมาชิก 5 คนจากวงไอดอล BNK48 มุ่งสู่ T-POP ระดับประเทศ"
+        },
+        {
+            "title": "แสตมป์ อภิวัชร์",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/fav/stamp.webp",
+            "link": "//www.youtube.com/c/123records",
+            "desc": "นักร้องสัญชาติไทยมีเสียงเป็นเอกลักษณ์และมีผู้ติดตามทั้งในและนอกประเทศ"
+        }
+    ],
+    "musicguide": {
+        "title": "ชื่อเพลง: ",
+        "art": "ศิลปิน: ",
+        "album": "เพลงจากอัลบั้ม ",
+        "released": "เริ่มวางจำหน่ายเมื่อ ",
+        "spot": "เล่นเพลงนี้บน Spotify"
+    },
+    "hoblist": "ฝึกเขียนโปรแกรม ปั่นจักรยาน ดูโทรทัศน์",
+    "playlist": "5lxNsikQIGSXQvx6nzMKtJ",
+    "ok": "ตกลง"
+}

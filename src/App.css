@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.route-wrapper {
+  position: relative;
+}
+
+.route-wrapper > div {
+  position: absolute;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+main {
+  width: 80%;
+  margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (max-width: 600px) {
+  main {
+    width: 92%;
+    margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+}
+
+.remove-ude{
+  text-decoration: none;
+  color: rgb(61, 61, 61);
+  cursor: pointer;
+}
+
+.swal2-input {
+  width: 60%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.app-barcurve {
+  border-bottom-right-radius: 18px !important;
+  border-bottom-left-radius: 18px !important;
+}
+
+.fixedbottom{
+  position: sticky;
+    bottom: 0;
+    z-index: 1071;
+}

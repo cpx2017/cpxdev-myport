@@ -1,0 +1,41 @@
+{
+    "title": "Covid-19 Vaccinated Report",
+    "desc": "Due to the epidemic situation of the coronavirus (Covid-19) that has caused a large number of infected people and deaths. System developers have to go to get a vaccination service. and have attached evidence of vaccination for applying for the job as follows",
+    "head": "Vaccinated #",
+    "list" : [
+        {
+            "date": "9 July 2021",
+            "name": "AstraZeneca",
+            "type": "Viral Vector Vaccines",
+            "place": "Faculty of Medicine, Siriraj Hospital",
+            "stat": "Vaccinated"
+        },
+        {
+            "date": "1 October 2021",
+            "name": "AstraZeneca",
+            "type": "Viral Vector Vaccines",
+            "place": "Faculty of Medicine, Siriraj Hospital",
+            "stat": "Vaccinated"
+        },
+        {
+            "date": "19 March 2021",
+            "name": "pFizer",
+            "type": "messenger RiboNucleic Acid (mRNA) Vaccines",
+            "place": "Bangsue Grand Station",
+            "stat": "Vaccinated"
+        }
+    ],
+    "listhead": {
+        "date": "Vaccinated plan date",
+        "name": "Vaccine Name/Brand",
+        "type": "Vaccine Type",
+        "place": "Place",
+        "stat": "Status",
+        "allstat": "Overall"
+    },
+    "allstat": "Booster vaccinated (Third Dose)",
+    "done": {
+        "btndigital": "View or Download Certification"
+    },
+    "credit": "Reference: Mor-Promt Application, Ministry of Public Health Thailand"
+}

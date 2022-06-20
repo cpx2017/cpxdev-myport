@@ -1,0 +1,41 @@
+{
+    "title": "Job and Internship Experience",
+    "list": [
+        {
+            "title": ".NET Analysit and Developer | Permenent Contract (Under Affiliated by Cube Of Nine Co.Ltd)",
+            "locate": "Thai Government Pension Fund (Cube of Nine Co.Ltd), South Sathon, Bangkok, TH",
+            "start": "Dec 2021",
+            "end": "Present",
+            "color": "rgb(33, 150, 243)",
+            "desc": "I analyse and develop web application and system from Customer (GPF's users) requirement.",
+            "presentjob": true
+        },
+        {
+            "title": ".NET Developer (Yearly contract)",
+            "locate": "Thai Government Pension Fund (Cube of Nine Co.Ltd), South Sathon, Bangkok, TH",
+            "start": "Dec 2020",
+            "end": "Nov 2021",
+            "color": "rgb(233, 30, 99)",
+            "desc": "I develop web application and system from Customer (GPF's users) requirement.",
+            "presentjob": false
+        },
+        {
+            "title": "Student Internship, Developer, IT Support",
+            "locate": "Dynacode Systems PTE.Ltd, Citilink Warehouse Complex, Singapore, SG",
+            "start": "Feb 2019",
+            "end": "Apr 2019",
+            "color": "rgb(233, 30, 99)",
+            "desc": "Learning programming and Dot-PIN/Laser Marking Machine. Including working, culture and lifestyle at there.",
+            "presentjob": false
+        },
+        {
+            "title": "Student Internship, Developer",
+            "locate": "i-Mark Solutions Co.Ltd, Yanawa, Bangkok, TH",
+            "start": "Nov 2018",
+            "end": "Feb 2019",
+            "color": "rgb(233, 30, 99)",
+            "desc": "Learning programming and Dot-PIN/Laser Marking Machine. Including developing Service Booking system to save product mainteniance detail.",
+            "presentjob": false
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "title": "แฟ้มสะสมผลงาน",
+    "see": "เยี่ยมชมผลงาน",
+    "list": [
+        {
+            "title": "ระบบจัดการงานซ่อมเครื่องจักร",
+            "group": "VB.Net Desktop App with SQL Server",
+            "desc": "ซอฟต์แวร์นี้ใช้ภาษา VB.Net (Windows Form App) ทำงานร่วมกับฐานข้อมูล SQL Server 2014 มีวัตถุประสงค์เพื่อบันทึกข้อมูลงานซ่อมในระบบฐานข้อมูลและเรียกใช้งานได้ง่ายขึ้น รวมทั้งสามารถตรวจสอบสถานะงานซ่อมและการรับประกันแบบเรียลไทม์และย้อนหลังได้",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-1.webp",
+            "link": ""
+        },
+        {
+            "title": "เว็บไซต์ Chinnathorn's MyPort",
+            "group": "React JS Frond-End framework and .NET Core Back-End API",
+            "desc": "แฟ้มสะสมผลงานออนไลน์ของตัวผมเอง เป็นเว็บแรกที่มีการวางระบบแบบ Microservice เพื่อแยกการทำงานระหว่าง Back-end และ Front-end ออกจากกัน ระบบหน้าบ้านใช้ React JS ในการพัฒนา UI ใหม่และเพิ่มประสิทธิภาพให้กับระบบ รวมทั้งระบบหลังบ้านด้วย ASP.Net Core และใช้หลักการสื่อสารแบบ API",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-2.webp",
+            "link": ""
+        },
+        {
+            "title": "โปรแกรม Telesis Marking Control",
+            "group": "VB.Net Desktop App",
+            "desc": "โปรแกรมสำหรับใช้ในส่งข้อมูลไปยัง Marking Controller เพื่อใช้ในการ Mark Chassis (พาร์ทสินค้าของรถยนต์) ภายในบริษัทอุตสาหกรรมรถยนต์ต่างๆ โดยพัฒนาด้วยภาษา VB.Net ทำงานร่วมกับฐานข้อมูล MySQL และส่งข้อมูลโปรโตคอลไปยัง Controller ด้วย RS232 Cable (Serialport)",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-3.webp",
+            "link": ""
+        },
+        {
+            "title": "แพลตฟอร์มสำหรับสั่งจองสินค้า",
+            "group": ".NET Core MVC E-Commerce Web app",
+            "desc": "เป็นเว็บไซต์รับจองสินค้าสั่งล่วงหน้า โดยมีการ Migrate จาก PreOrder System ที่แต่เดิมใช้ .NET framework เป็น .NET Core 3.1 และรองรับการ Deploy ผ่าน Docker Container และระบบหน้าร้านใช้ React JS เพื่อให้เกิดลูกเล่นที่ทันสมัยและน่าสนใจ ในขณะที่ประสิทธิภาพดีกว่าเดิม ระบบฐานข้อมูลรองรับทั้ง MySQL และ SQL Server",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-4.webp",
+            "link": "https://cpxpreorder.azurewebsites.net"
+        },
+        {
+            "title": "ระบบจัดการแบบสำรวจ",
+            "group": "React JS with Node JS.",
+            "desc": "เป็นระบบสำหรับจัดการแบบสำรวจสำหรับองค์กร มีรูปแบบคำถามที่หลากหลายและใช้งานง่าย และมีประสิทธิภาพด้วย React JS พร้อมกับการทำงานร่วมกับระบบหลังบ้าน NodeJS",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/work-5.webp",
+            "link": ""
+        }
+    ]
+}

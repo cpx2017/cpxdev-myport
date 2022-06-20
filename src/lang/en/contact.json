@@ -1,0 +1,20 @@
+{
+    "title": "Contact Me",
+    "tel": {
+        "title": "Telephone No.",
+        "desc": "(+66) 659578993 (Provided by AIS 5G)",
+        "hy": "+66659578993"
+    },
+    "mail": {
+        "title": "Email",
+        "desc": "chinnathorn.p@gmail.com or admin@cpxdev.tk",
+        "hy": "chinnathorn.p@gmail.com"
+    },
+    "address": {
+        "title": "Present Address",
+        "desc": "67/90 Moo 3, Bangnamchuet sub-district, Mueng Samut-Sakhon district, Samut-Sakhon province, 74000"
+    },
+    "other": "Contact me with Direct Contact",
+    "otherdesc": "Contact me with Direct Contact (Click here to open)",
+    "directinbusy": "Direct Contact is processing. You cannot stop it right now."
+}

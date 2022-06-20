@@ -1,0 +1,53 @@
+{
+    "tag": "en",
+    "title": "Hobby and Favorite",
+    "title1": "Hobby",
+    "title2": "Favorite (Click artist name to view image)",
+    "title3": "Liked Songs (Playlist by Spotify)",
+    "live": {
+        "title": "Song Title",
+        "artist": "Artist",
+        "time": "Update time",
+        "play": "I'm still listening",
+        "pause": "Please wait to choose song",
+        "err": "Unknown song",
+        "off": "Admin is offline",
+        "will": "We will back soon"
+    },
+    "favlist": [
+        {
+            "title": "Maroon 5",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/fav/maroon5.webp",
+            "link": "//www.maroon5.com",
+            "desc": "The famous US rock-pop band which have many popular songs."
+        },
+        {
+            "title": "Phil Collins",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/fav/phil.webp",
+            "link": "//www.genesis-music.com",
+            "desc": "The former drumer of Genesis band. And singer who have unique voice"
+        },
+        {
+            "title": "Bruno Mars",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/fav/brunomars.webp",
+            "link": "//www.brunomars.com",
+            "desc": "Pop Icon singer who has singing style like in 90's."
+        },
+        {
+            "title": "Air Supply",
+            "src": "https://cdn.jsdelivr.net/gh/cpx2017/cpxcdnbucket@main/myport/fav/airsupply.webp",
+            "link": "//www.airsupplymusic.com",
+            "desc": "The famous 80's band. Altrough now they have only two members"
+        }
+    ],
+    "musicguide": {
+        "title": "Song name: ",
+        "art": "Artist: ",
+        "album": "Song from album ",
+        "released": "Released in ",
+        "spot": "Listening on Spotify"
+    },
+    "hoblist": "Practice Programming, Ride a Bike, Watching TV",
+    "playlist": "4sv3J06OHbF9swzscVMBaO",
+    "ok": "Close"
+}
