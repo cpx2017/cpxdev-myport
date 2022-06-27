@@ -693,7 +693,7 @@ React.useEffect(() => {
             <ListItemIcon>
               <NetworkCheckIcon />
             </ListItemIcon>
-            <ListItemText primary="System Status" secondary={savedLat > 0 && savedLat <= 40 ? 'Great' : savedLat > 40 && savedLat <= 80 ? 'Good' : 'Bad'} />
+            <ListItemText primary={"System Status (" + Fet().nme + ')'} secondary={savedLat > 0 && savedLat <= 40 ? 'Great' : savedLat > 40 && savedLat <= 80 ? 'Good' : 'Bad'} />
           </ListItem>
           </Tooltip>
             </DialogContentText>
