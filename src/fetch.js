@@ -7,12 +7,12 @@ function Flowup() {
      if (Math.floor(Math.random() * 2) == 0) {
           return {
              ul: "https://cpxapiweb2.azurewebsites.net",
-             nme: "Worldwide (Zone 2)"
+             nme: "Worldwide"
          }
      } else {
           return {
              ul: "https://cpxapiweb.azurewebsites.net",
-             nme: "Worldwide (Zone 1)"
+             nme: "Worldwide"
          }
      }
 }
