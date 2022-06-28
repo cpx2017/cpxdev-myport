@@ -4,25 +4,31 @@ var reg = 'Loading';
 
 fetch('https://ipapi.co/json/')
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => {
+    switch(data.continent_code) {
+      case "AS": case "OC": {
+        ul = 'https://cpxapiweb2.azurewebsites.net',
+        reg = 'AS'
+        break;
+      }
+      case "AF": case "EU": {
+        ul = 'https://cpxapiweb.azurewebsites.net',
+        reg = 'EU'
+        break;
+      }
+      default: {
+        ul = 'https://apiweb.cpxdev.tk',
+        reg = 'US'
+        break;
+      }
+    }
+});
 
 function Flowup() {
-     if (Math.floor(Math.random() * 3) == 1) {
-          return {
-             ul: "https://cpxapiweb2.azurewebsites.net",
-             nme: "Worldwide"
+      return {
+             ul: ul,
+             nme: reg
          }
-     } else if (Math.floor(Math.random() * 3) == 2) {
-          return {
-             ul: "https://apiweb.cpxdev.tk",
-             nme: "Worldwide"
-         }
-     } else {
-          return {
-             ul: "https://cpxapiweb.azurewebsites.net",
-             nme: "Worldwide"
-         }
-     }
 }
 
 export default Flowup;
