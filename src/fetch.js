@@ -2,6 +2,9 @@ var ul = '';
 var added = false;
 var reg = 'Loading';
 
+fetch('https://ipapi.co/json/')
+  .then(response => response.json())
+  .then(data => console.log(data));
 
 function Flowup() {
      if (Math.floor(Math.random() * 3) == 1) {
