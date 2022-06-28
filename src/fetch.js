@@ -7,17 +7,17 @@ fetch('https://ipapi.co/json/')
   .then(data => {
     switch(data.continent_code) {
       case "AS": case "OC": {
-        ul = 'https://cpxapiweb2.azurewebsites.net',
+        ul = 'https://cpxapiweb2.azurewebsites.net'
         reg = 'AS'
         break;
       }
       case "AF": case "EU": {
-        ul = 'https://cpxapiweb.azurewebsites.net',
+        ul = 'https://cpxapiweb.azurewebsites.net'
         reg = 'EU'
         break;
       }
       default: {
-        ul = 'https://apiweb.cpxdev.tk',
+        ul = 'https://apiweb.cpxdev.tk'
         reg = 'US'
         break;
       }
