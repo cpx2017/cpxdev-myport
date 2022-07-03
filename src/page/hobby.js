@@ -77,7 +77,7 @@ const Hob = ({setP}) => {
   React.useEffect(() => {
     setP(localStorage.getItem('langconfig') !== null && localStorage.getItem('langconfig') == 'th' ? th.title : en.title)
   }, [])
-    const [Lang, setLang] = useState(th);
+    const [Lang, setLang] = useState(null);
     const [isOpen, setOpen] = React.useState(false);
     const [music, setMusic] = React.useState([]);
     const [arr, setArr] = useState( {
@@ -94,7 +94,7 @@ const Hob = ({setP}) => {
       };
     const syncpage = () => {
       if (localStorage.getItem('langconfig') !== null) {
-        if (localStorage.getItem('langconfig') === 'th') {
+        if (localStorage.getItem('langconfig') == 'th') {
           setLang(th);
         } else {
           setLang(en);
@@ -136,12 +136,15 @@ const Hob = ({setP}) => {
             }
         }
     }, 1);
+    return () => {
+      setMusic([])
+    }
     }, [])
 
    
 
     React.useEffect(() => {
-      if (Fet().ul !== '') {
+      if (Fet().ul !== '' && Lang != null) {
         setMusic([])
         axios({
           method: 'post',
@@ -153,14 +156,15 @@ const Hob = ({setP}) => {
           // handle error
       });
     }
-    }, [Lang.playlist])
+    }, [Lang])
 
     const Preview = (id, url) => {
       setSample(music.filter(x => x.track.id == id)[0])
       console.log(music.filter(x => x.track.id == id)[0])
     }
 
-    return (
+    if (Lang != null) {
+      return (
         <div>
           <Slide direction="right" in={true} timeout={localStorage.getItem('graphic') === null ? 600 : 0}>
             <Typography gutterBottom variant="h5" component="h2">
@@ -307,6 +311,8 @@ const Hob = ({setP}) => {
           </Dialog>
         </div>
      );
+    }
+   return null
 }
  
 export default Hob;

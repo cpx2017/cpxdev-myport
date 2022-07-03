@@ -10,9 +10,22 @@
         "desc": "chinnathorn.p@gmail.com or admin@cpxdev.tk",
         "hy": "chinnathorn.p@gmail.com"
     },
-    "address": {
-        "title": "Present Address",
-        "desc": "67/90 Moo 3, Bangnamchuet sub-district, Mueng Samut-Sakhon district, Samut-Sakhon province, 74000"
+    "social": {
+        "title": "Social Network",
+        "desc": [
+            {
+                "icon": "https://img.icons8.com/ios-glyphs/344/line-me.png",
+                "link": "https://line.me/ti/p/EZvf3hSGNx"
+            },
+            {
+                "icon": "https://img.icons8.com/ios-glyphs/344/telegram-app.png",
+                "link": "https://t.me/cpxth"
+            },
+            {
+                "icon": "https://img.icons8.com/ios-glyphs/344/github.png",
+                "link": "https://github.com/cpx2017"
+            }
+        ]
     },
     "other": "Contact me with Direct Contact",
     "otherdesc": "Contact me with Direct Contact (Click here to open)",

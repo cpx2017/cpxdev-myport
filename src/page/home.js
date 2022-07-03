@@ -42,11 +42,11 @@ const Home = ({setP}) => {
     });
     return ( 
       <Grow in={Ready} timeout={localStorage.getItem('graphic') === null ? 1000 : 0}>
+        
       <Carousel
           navButtonsAlwaysInvisible={true}
           showThumbs={true}
           stopAutoPlayOnHover={false}
-          width='400px'
           interval={7000}
       >
           {

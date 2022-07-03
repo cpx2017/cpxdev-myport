@@ -338,6 +338,7 @@ React.useEffect(() => {
   return (
     <div>
    <div className={classes.root}>
+    <Slide in={true} direction="right" timeout={700}>
    <nav className={classes.drawer} aria-label="mailbox folders">
    <Hidden smUp implementation="css">
           <Drawer
@@ -534,6 +535,10 @@ React.useEffect(() => {
             </ListItem>
           </Drawer>
     </Hidden>
+    </nav>
+    </Slide>
+
+    
     <Slide in={true} direction='down' timeout={600}>
           <AppBar
             color="primary"
@@ -561,7 +566,7 @@ React.useEffect(() => {
             </Toolbar>
           </AppBar>
         </Slide>
-    </nav>
+
           <main onClick={() => allclose()} className={classes.content}>
             <div className={classes.drawerHeader} />
             <br />
@@ -693,7 +698,7 @@ React.useEffect(() => {
             <ListItemIcon>
               <NetworkCheckIcon />
             </ListItemIcon>
-            <ListItemText primary="System Status" secondary={savedLat > 0 && savedLat <= 40 ? 'Great' : savedLat > 40 && savedLat <= 80 ? 'Good' : 'Bad'} />
+            <ListItemText primary={"System Status (" + Fet().nme + ')'} secondary={savedLat > 0 && savedLat <= 40 ? 'Great' : savedLat > 40 && savedLat <= 80 ? 'Good' : 'Bad'} />
           </ListItem>
           </Tooltip>
             </DialogContentText>

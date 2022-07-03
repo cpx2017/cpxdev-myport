@@ -132,12 +132,14 @@ const Hob = ({col, setCol,setP}) => {
             id="panel3a-header"
           >
           <Grow in={true} timeout={localStorage.getItem('graphic') === null ? 1400 : 0}>
-            <Typography variant="h6" className={classes.headingst}>{Lang.address.title}</Typography>
+            <Typography variant="h6" className={classes.headingst}>{Lang.social.title}</Typography>
           </Grow>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="body1">
-              <b>{Lang.address.title}</b>: {Lang.address.desc}
+              <b>{Lang.social.title}</b>: {Lang.social.desc.map((item) => (
+                <img src={item.icon} width={30} style={{cursor: 'pointer'}} onClick={() => window.open(item.link, '_target')} />
+              ))}
             </Typography>
           </AccordionDetails>
         </Accordion>

@@ -10,9 +10,22 @@
         "desc": "chinnathorn.p@gmail.com หรือ admin@cpxdev.tk",
         "hy": "chinnathorn.p@gmail.com"
     },
-    "address": {
-        "title": "ที่อยู่ปัจจุบัน",
-        "desc": "67/90 หมู่ 3 ตำบลบางน้ำจืด อำเภอเมืองสมุทรสาคร จังหวัดสมุทรสาคร 74000"
+    "social": {
+        "title": "ช่องทางออนไลน์",
+        "desc": [
+            {
+                "icon": "https://img.icons8.com/ios-glyphs/344/line-me.png",
+                "link": "https://line.me/ti/p/EZvf3hSGNx"
+            },
+            {
+                "icon": "https://img.icons8.com/ios-glyphs/344/telegram-app.png",
+                "link": "https://t.me/cpxth"
+            },
+            {
+                "icon": "https://img.icons8.com/ios-glyphs/344/github.png",
+                "link": "https://github.com/cpx2017"
+            }
+        ]
     },
     "other": "ฟอร์มสำหรับติดต่อผ่านระบบ Direct Contact",
     "otherdesc": "ฟอร์มสำหรับติดต่อผ่านระบบ Direct Contact (คลิกที่นี่เพื่อเปิดฟอร์ม)",
