@@ -115,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    zIndex: theme.zIndex.drawer + 1,
+    zIndex: theme.zIndex.drawer + 10,
   },
 
   Langmobile: {
@@ -149,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   drawerPaper: {
-    width: drawerWidth,
+    width: drawerWidth
   },
   drawerHeader: {
     display: 'flex',
@@ -567,7 +567,7 @@ React.useEffect(() => {
           </AppBar>
         </Slide>
 
-          <main onClick={() => allclose()} className={classes.content}>
+        <main onClick={() => allclose()} style={{zIndex: 0}} className={classes.content}>
             <div className={classes.drawerHeader} />
             <br />
             {localStorage.getItem('graphic') === null ? (
