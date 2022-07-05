@@ -633,7 +633,6 @@ React.useEffect(() => {
       </div>
 
  <footer className={(scrollPosition > 0 ? 'fixedbottom' : 'lockbottom') + ' col-md-12 bg-light'}>
-          <hr />
           <Typography variant="body1" align="center">
             &copy; Copyright {new Date().getFullYear()} - Chinnathorn Promnaruritr, Allright Reserved
           </Typography>
