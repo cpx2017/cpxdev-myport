@@ -238,13 +238,13 @@ export default function App() {
   
   const [Lang, setLang] = React.useState(th);
 
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = React.useState(0);
   const handleScroll = () => {
       const position = window.pageYOffset;
       setScrollPosition(position);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
       window.addEventListener('scroll', handleScroll, { passive: true });
 
       return () => {
