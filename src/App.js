@@ -148,7 +148,6 @@ const useStyles = makeStyles((theme) => ({
   },
   drawer: {
     zIndex: 15,
-    paddingBottom: '50px',
     [theme.breakpoints.up('sm')]: {
       zIndex: 8,
       width: drawerWidth,
@@ -539,7 +538,7 @@ React.useEffect(() => {
               </ListItemIcon>
               <ListItemText primary={Lang.menu.set} />
             </ListItem>
-            <ListItem button onClick={() => setApiOpen(true)}>
+            <ListItem button onClick={() => setApiOpen(true)} className='pt-5'>
               <ListItemIcon>
                 <InfoIcon />
               </ListItemIcon>
