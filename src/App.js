@@ -218,6 +218,8 @@ const bounceTransition = {
     scale: bounce(1),
   },
 };
+var scrollPosition = 0
+
 export default function App() {
   const classes = useStyles();
   const [swipe, setSwipe] = React.useState(true);
@@ -238,11 +240,10 @@ export default function App() {
   
   const [Lang, setLang] = React.useState(th);
 
-  const [scrollPosition, setScrollPosition] = React.useState(0);
   const handleScroll = () => {
       const position = window.pageYOffset;
     console.log('POS',position)
-      setScrollPosition(position);
+      scrollPosition = (position);
   };
 
   React.useEffect(() => {
