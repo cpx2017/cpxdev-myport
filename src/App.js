@@ -104,11 +104,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    flexGrow: 1,
-    cursor: 'pointer',
-    display: 'block',
-    [theme.breakpoints.down('xs')]: {
-      display: 'none',
+    display: 'none',
+    [theme.breakpoints.up('xs')]: {
+      flexGrow: 1,
+      cursor: 'pointer',
+      display: 'block',
     },
   },
   inputRoot: {
