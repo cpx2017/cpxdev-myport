@@ -342,7 +342,46 @@ React.useEffect(() => {
   return (
     <div>
    <div className={classes.root}>
-    <Slide in={true} direction="right" timeout={700}>
+        <main onClick={() => allclose()} style={{zIndex: 0}} className={classes.content}>
+            <div className={classes.drawerHeader} />
+            <br />
+            {localStorage.getItem('graphic') === null ? (
+              <AnimatedSwitch
+                atEnter={bounceTransition.atEnter}
+                atLeave={bounceTransition.atLeave}
+                atActive={bounceTransition.atActive}
+                mapStyles={mapStylespage}
+              >
+                <Route exact path="/" render={() => <Home setP={(v) => setP(v)} />} />
+                <Route path="/profile" render={() => <Profile setP={(v) => setP(v)} />} />
+                <Route path="/education" render={() => <Education setP={(v) => setP(v)} />} />
+                <Route path="/job" render={() => <Job setP={(v) => setP(v)} />} />
+                <Route path="/skill" render={() => <Skill setP={(v) => setP(v)} />} />
+                <Route path="/portfolio" render={() => <Portfolio setP={(v) => setP(v)} />} />
+                <Route path="/hobby" render={() => <Hobby setP={(v) => setP(v)} />} />
+                <Route path="/contact" render={() => <Contact setP={(v) => setP(v)} col={formopen} setCol={(val) => setFormOpen({...formopen, contact: val})} />} />
+                <Route path="/vaccinated" render={() => <Vac setP={(v) => setP(v)} />} />
+                <Route path="/apidoc" render={() => <ApiDoc setP={(v) => setP(v)} col={formopen} setCol={(val) => setFormOpen({...formopen, api: val})} />} />
+                <Route render={() => <ErrorPage setP={(v) => setP(v)} />} />
+              </AnimatedSwitch>
+            ) : (
+              <BasicSwitch>
+                <Route exact path="/" render={() => <Home setP={(v) => setP(v)} />} />
+                <Route path="/profile" render={() => <Profile setP={(v) => setP(v)} />} />
+                <Route path="/education" render={() => <Education setP={(v) => setP(v)} />} />
+                <Route path="/job" render={() => <Job setP={(v) => setP(v)} />} />
+                <Route path="/skill" render={() => <Skill setP={(v) => setP(v)} />} />
+                <Route path="/portfolio" render={() => <Portfolio setP={(v) => setP(v)} />} />
+                <Route path="/hobby" render={() => <Hobby setP={(v) => setP(v)} feturi={Fet().ul !== '' ? Fet().ul : ''} />} />
+                <Route path="/contact" render={() => <Contact setP={(v) => setP(v)} col={formopen} setCol={(val) => setFormOpen({...formopen, contact: val})} />} />
+                <Route path="/vaccinated" render={() => <Vac setP={(v) => setP(v)} />} />
+                <Route path="/apidoc" render={() => <ApiDoc setP={(v) => setP(v)} col={formopen} setCol={(val) => setFormOpen({...formopen, api: val})} />} />
+                <Route render={() => <ErrorPage setP={(v) => setP(v)} />} />
+              </BasicSwitch>
+            )}
+            <br />
+          </main>
+   <Slide in={true} direction="right" timeout={700}>
    <nav className={classes.drawer} aria-label="mailbox folders">
    <Hidden smUp implementation="css">
           <Drawer
@@ -571,45 +610,6 @@ React.useEffect(() => {
           </AppBar>
         </Slide>
 
-        <main onClick={() => allclose()} style={{zIndex: 0}} className={classes.content}>
-            <div className={classes.drawerHeader} />
-            <br />
-            {localStorage.getItem('graphic') === null ? (
-              <AnimatedSwitch
-                atEnter={bounceTransition.atEnter}
-                atLeave={bounceTransition.atLeave}
-                atActive={bounceTransition.atActive}
-                mapStyles={mapStylespage}
-              >
-                <Route exact path="/" render={() => <Home setP={(v) => setP(v)} />} />
-                <Route path="/profile" render={() => <Profile setP={(v) => setP(v)} />} />
-                <Route path="/education" render={() => <Education setP={(v) => setP(v)} />} />
-                <Route path="/job" render={() => <Job setP={(v) => setP(v)} />} />
-                <Route path="/skill" render={() => <Skill setP={(v) => setP(v)} />} />
-                <Route path="/portfolio" render={() => <Portfolio setP={(v) => setP(v)} />} />
-                <Route path="/hobby" render={() => <Hobby setP={(v) => setP(v)} />} />
-                <Route path="/contact" render={() => <Contact setP={(v) => setP(v)} col={formopen} setCol={(val) => setFormOpen({...formopen, contact: val})} />} />
-                <Route path="/vaccinated" render={() => <Vac setP={(v) => setP(v)} />} />
-                <Route path="/apidoc" render={() => <ApiDoc setP={(v) => setP(v)} col={formopen} setCol={(val) => setFormOpen({...formopen, api: val})} />} />
-                <Route render={() => <ErrorPage setP={(v) => setP(v)} />} />
-              </AnimatedSwitch>
-            ) : (
-              <BasicSwitch>
-                <Route exact path="/" render={() => <Home setP={(v) => setP(v)} />} />
-                <Route path="/profile" render={() => <Profile setP={(v) => setP(v)} />} />
-                <Route path="/education" render={() => <Education setP={(v) => setP(v)} />} />
-                <Route path="/job" render={() => <Job setP={(v) => setP(v)} />} />
-                <Route path="/skill" render={() => <Skill setP={(v) => setP(v)} />} />
-                <Route path="/portfolio" render={() => <Portfolio setP={(v) => setP(v)} />} />
-                <Route path="/hobby" render={() => <Hobby setP={(v) => setP(v)} feturi={Fet().ul !== '' ? Fet().ul : ''} />} />
-                <Route path="/contact" render={() => <Contact setP={(v) => setP(v)} col={formopen} setCol={(val) => setFormOpen({...formopen, contact: val})} />} />
-                <Route path="/vaccinated" render={() => <Vac setP={(v) => setP(v)} />} />
-                <Route path="/apidoc" render={() => <ApiDoc setP={(v) => setP(v)} col={formopen} setCol={(val) => setFormOpen({...formopen, api: val})} />} />
-                <Route render={() => <ErrorPage setP={(v) => setP(v)} />} />
-              </BasicSwitch>
-            )}
-            <br />
-          </main>
       </div>
       <footer className='fixedbottom bg-light'>
           <hr />
