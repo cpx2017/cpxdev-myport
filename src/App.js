@@ -441,7 +441,7 @@ React.useEffect(() => {
     </Hidden>
    <Hidden xsDown implementation="css">
           <Drawer
-            className={classes.drawer}
+            className={classes.drawer + ' pt-5'}
             variant="permanent"
             color="primary"
             anchor="left"
