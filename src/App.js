@@ -150,11 +150,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
       flexShrink: 0,
-      backgroundColor: 'white'
+      backgroundColor: '#ffffff'
     },
   },
   drawerPaper: {
-    width: drawerWidth
+    width: drawerWidth,
+      backgroundColor: '#ffffff'
   },
   drawerHeader: {
     display: 'flex',
@@ -162,7 +163,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0, 2),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end',,
+    backgroundColor: '#ffffff'
   },
   content: {
     flexGrow: 1,
