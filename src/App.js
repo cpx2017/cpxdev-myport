@@ -147,6 +147,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
   },
   drawer: {
+    zIndex: 15,
     [theme.breakpoints.up('sm')]: {
       zIndex: 8,
       width: drawerWidth,
