@@ -14,6 +14,11 @@ const theme = createTheme({
             contrastText: "#0f3bc0"
           },
       },
+     breakpoints: {
+    values: {
+      phonetight: 200,
+    },
+  },
 });
 
 export default theme;
