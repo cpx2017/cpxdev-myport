@@ -107,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     cursor: 'pointer',
     display: 'block',
-    [theme.breakpoints.down('phonetight')]: {
+    [theme.breakpoints.down('xs')]: {
       display: 'none',
     },
   },
