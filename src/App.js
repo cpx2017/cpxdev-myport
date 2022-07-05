@@ -159,15 +159,6 @@ const useStyles = makeStyles((theme) => ({
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
   },
-  drawerHeader2: {
-    display: 'flex',
-    alignItems: 'center',
-    padding: theme.spacing(0, 2),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
-    paddingTop: '2px'
-  },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
@@ -459,10 +450,8 @@ React.useEffect(() => {
             }}
             open
           >
-          <div className={classes.drawerHeader2} position="fixed">
-            <IconButton onClick={handleDrawerClose} size="large">
-              <CloseIcon />
-            </IconButton>
+          <div className='pt-2' />
+          <div className={classes.drawerHeader} position="fixed">
           </div>
           <Divider />
           <ListItem component={Link} to='/' button>
