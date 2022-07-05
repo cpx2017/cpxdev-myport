@@ -616,7 +616,7 @@ React.useEffect(() => {
         </Slide>
       </div>
 
- <footer className='fixedbottom col-md-12 bg-light'>
+ <footer className='fixedbottom col-md-12 bg-light' style={{zIndex: 10}}>
           <hr />
           <Typography variant="body1" align="center">
             &copy; Copyright {new Date().getFullYear()} - Chinnathorn Promnaruritr, Allright Reserved
