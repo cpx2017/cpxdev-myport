@@ -238,6 +238,20 @@ export default function App() {
   
   const [Lang, setLang] = React.useState(th);
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+      const position = window.pageYOffset;
+      setScrollPosition(position);
+  };
+
+  useEffect(() => {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+      };
+  }, []);
+  
   const settingDialog = () => {
     Lat(Fet().ul + '/home/status').then(setLat)
     setSetting(true)
@@ -618,7 +632,7 @@ React.useEffect(() => {
         </Slide>
       </div>
 
- <footer className='fixedbottom col-md-12 bg-light'>
+ <footer className={(scrollPosition > 0 'fixedbottom' : 'lockbottom') + ' col-md-12 bg-light'}>
           <hr />
           <Typography variant="body1" align="center">
             &copy; Copyright {new Date().getFullYear()} - Chinnathorn Promnaruritr, Allright Reserved
