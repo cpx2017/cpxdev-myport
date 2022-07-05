@@ -342,6 +342,17 @@ React.useEffect(() => {
   return (
     <div>
    <div className={classes.root}>
+  
+
+      <footer className='fixedbottom col-md-12 bg-light'>
+          <hr />
+          <Typography variant="body1" align="center">
+            &copy; Copyright {new Date().getFullYear()} - Chinnathorn Promnaruritr, Allright Reserved
+          </Typography>
+            <br/>
+        </footer>
+
+  
     <Slide in={true} direction="right" timeout={700}>
    <nav className={classes.drawer} aria-label="mailbox folders">
    <Hidden smUp implementation="css">
@@ -581,15 +592,6 @@ React.useEffect(() => {
             )}
             <br />
           </main>
-
-
-      <footer className='fixedbottom col-md-12 bg-light'>
-          <hr />
-          <Typography variant="body1" align="center">
-            &copy; Copyright {new Date().getFullYear()} - Chinnathorn Promnaruritr, Allright Reserved
-          </Typography>
-            <br/>
-        </footer>
 
     <Slide in={true} direction='down' timeout={600}>
           <AppBar
