@@ -583,7 +583,7 @@ React.useEffect(() => {
           </main>
 
 
-      <footer className='fixedbottom bg-light'>
+      <footer className='fixedbottom col-md-12 bg-light'>
           <hr />
           <Typography variant="body1" align="center">
             &copy; Copyright {new Date().getFullYear()} - Chinnathorn Promnaruritr, Allright Reserved
