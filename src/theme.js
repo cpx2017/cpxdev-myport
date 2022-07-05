@@ -16,7 +16,7 @@ const theme = createTheme({
       },
      breakpoints: {
     values: {
-      phonetight: 200,
+      phonetight: 300,
     },
   },
 });
