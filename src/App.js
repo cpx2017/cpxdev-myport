@@ -241,6 +241,7 @@ export default function App() {
   const [scrollPosition, setScrollPosition] = React.useState(0);
   const handleScroll = () => {
       const position = window.pageYOffset;
+    console.log('POS',position)
       setScrollPosition(position);
   };
 
