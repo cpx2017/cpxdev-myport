@@ -119,7 +119,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    zIndex: theme.zIndex.drawer + 10,
+    zIndex: 10,
   },
 
   Langmobile: {
