@@ -105,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    cursor: 'pointer'
+    cursor: 'pointer',
     display: 'block',
     [theme.breakpoints.down('xs')]: {
       display: 'none',
