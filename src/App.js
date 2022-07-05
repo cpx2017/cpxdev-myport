@@ -441,7 +441,7 @@ React.useEffect(() => {
     </Hidden>
    <Hidden xsDown implementation="css">
           <Drawer
-            className={classes.drawer + ' pt-5'}
+            className={classes.drawer}
             variant="permanent"
             color="primary"
             anchor="left"
@@ -450,9 +450,7 @@ React.useEffect(() => {
             }}
             open
           >
-          <div className={classes.drawerHeader} position="fixed">
-         
-          </div>
+         <div className='pt-2' />
           <Divider />
           <ListItem component={Link} to='/' button>
             <ListItemIcon>
