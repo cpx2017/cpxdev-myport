@@ -239,8 +239,8 @@ export default function App() {
   
   const [Lang, setLang] = React.useState(th);
 
-  const [scrollPosition, setPosition] = useState(0);
-  useLayoutEffect(() => {
+  const [scrollPosition, setPosition] = React.useState(0);
+  React.useEffect(() => {
     function updatePosition() {
       setPosition(window.pageYOffset);
     }
