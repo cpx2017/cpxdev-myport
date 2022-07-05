@@ -582,6 +582,15 @@ React.useEffect(() => {
             <br />
           </main>
 
+
+      <footer className='fixedbottom bg-light'>
+          <hr />
+          <Typography variant="body1" align="center">
+            &copy; Copyright {new Date().getFullYear()} - Chinnathorn Promnaruritr, Allright Reserved
+          </Typography>
+            <br/>
+        </footer>
+
     <Slide in={true} direction='down' timeout={600}>
           <AppBar
             color="primary"
@@ -611,13 +620,7 @@ React.useEffect(() => {
         </Slide>
 
       </div>
-      <footer className='fixedbottom bg-light'>
-          <hr />
-          <Typography variant="body1" align="center">
-            &copy; Copyright {new Date().getFullYear()} - Chinnathorn Promnaruritr, Allright Reserved
-          </Typography>
-            <br/>
-        </footer>
+
         <Dialog
           TransitionComponent={Grow}
           transitionDuration={localStorage.getItem('graphic') === null ? 500 : 200}
