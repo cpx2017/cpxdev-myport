@@ -90,6 +90,11 @@ a {
     bottom: 0;
     z-index: 12;
 }
+.lockbottom {
+   position: absolute;
+    bottom: 0;
+    z-index: 12;
+}
 
 .pb-6{
   padding-bottom: 80px !important
