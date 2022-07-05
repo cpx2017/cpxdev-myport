@@ -538,7 +538,7 @@ React.useEffect(() => {
               </ListItemIcon>
               <ListItemText primary={Lang.menu.set} />
             </ListItem>
-            <ListItem button onClick={() => setApiOpen(true)} className='pb-5'>
+            <ListItem button onClick={() => setApiOpen(true)} className='pb-6'>
               <ListItemIcon>
                 <InfoIcon />
               </ListItemIcon>
