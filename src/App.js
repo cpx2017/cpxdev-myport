@@ -106,6 +106,10 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     cursor: 'pointer'
+    display: 'block',
+    [theme.breakpoints.down('xs')]: {
+      display: 'none',
+    },
   },
   inputRoot: {
     color: 'inherit',
@@ -130,7 +134,7 @@ const useStyles = makeStyles((theme) => ({
       display: 'block',
     },
   },
-
+  
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
