@@ -218,7 +218,6 @@ const bounceTransition = {
     scale: bounce(1),
   },
 };
-var scrollPosition = 0
 
 export default function App() {
   const classes = useStyles();
@@ -240,6 +239,15 @@ export default function App() {
   
   const [Lang, setLang] = React.useState(th);
 
+  const [scrollPosition, setPosition] = useState(0);
+  useLayoutEffect(() => {
+    function updatePosition() {
+      setPosition(window.pageYOffset);
+    }
+    window.addEventListener('scroll', updatePosition);
+    updatePosition();
+    return () => window.removeEventListener('scroll', updatePosition);
+  }, []);
   
   const settingDialog = () => {
     Lat(Fet().ul + '/home/status').then(setLat)
@@ -621,7 +629,7 @@ React.useEffect(() => {
         </Slide>
       </div>
 
- <footer className={(window.pageYOffset == 0 ? 'lockbottom' : 'fixedbottom') + ' col-md-12 pt-3 bg-light'}>
+ <footer className={(scrollPosition == 0 ? 'lockbottom' : 'fixedbottom') + ' col-md-12 pt-3 bg-light'}>
           <Typography variant="body1" align="center">
             &copy; Copyright {new Date().getFullYear()} - Chinnathorn Promnaruritr, Allright Reserved
           </Typography>
