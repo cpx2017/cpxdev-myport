@@ -18,11 +18,18 @@
             "stat": "Vaccinated"
         },
         {
-            "date": "19 March 2021",
+            "date": "19 March 2022",
             "name": "pFizer",
             "type": "messenger RiboNucleic Acid (mRNA) Vaccines",
             "place": "Bangsue Grand Station",
             "stat": "Vaccinated"
+        },
+        {
+            "date": "30 July 2022",
+            "name": "Assigned for pFizer",
+            "type": "messenger RiboNucleic Acid (mRNA) Vaccines",
+            "place": "Bangsue Grand Station",
+            "stat": "Under appointment"
         }
     ],
     "listhead": {
