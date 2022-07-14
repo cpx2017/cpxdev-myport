@@ -134,7 +134,6 @@ const useStyles = makeStyles((theme) => ({
       display: 'block',
     },
   },
-  
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
