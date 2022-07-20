@@ -273,8 +273,6 @@ const Hob = ({setP}) => {
             aria-labelledby="scroll-dialog-title"
             aria-describedby="scroll-dialog-description"
           >
-            {
-              sam != null && (
                 <>
                <DialogContent dividers>
                 <div className='row'>
@@ -306,8 +304,6 @@ const Hob = ({setP}) => {
                 </div>
                  </DialogContent>
                 </>
-              )
-            }
           </Dialog>
         </div>
      );
