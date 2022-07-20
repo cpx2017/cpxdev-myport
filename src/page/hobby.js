@@ -263,6 +263,8 @@ const Hob = ({setP}) => {
               classes={classes}
             />
           </Dialog>
+            {sam != null && (
+                    
           <Dialog
             TransitionComponent={Grow}
             transitionDuration={localStorage.getItem('graphic') === null ? 500 : 200}
@@ -305,6 +307,7 @@ const Hob = ({setP}) => {
                  </DialogContent>
                 </>
           </Dialog>
+            )}
         </div>
      );
     }
