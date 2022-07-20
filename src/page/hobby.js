@@ -79,6 +79,7 @@ const Hob = ({setP}) => {
   }, [])
     const [Lang, setLang] = useState(null);
     const [isOpen, setOpen] = React.useState(false);
+     const [songPreview, setPreview] = React.useState(false);
     const [music, setMusic] = React.useState([]);
     const [arr, setArr] = useState( {
       title: "",
@@ -160,6 +161,7 @@ const Hob = ({setP}) => {
 
     const Preview = (id, url) => {
       setSample(music.filter(x => x.track.id == id)[0])
+     setPreview(true);
       console.log(music.filter(x => x.track.id == id)[0])
     }
 
@@ -267,8 +269,11 @@ const Hob = ({setP}) => {
           <Dialog
             TransitionComponent={Grow}
             transitionDuration={localStorage.getItem('graphic') === null ? 500 : 200}
-            open={sam != null ? true : false}
-            onClose={() => setSample(null)}
+            open={songPreview}
+            onClose={() => {
+                setPreview(false);
+                setSample(null);
+            }}
             maxWidth="xl"
             scroll={'paper'}
             aria-labelledby="scroll-dialog-title"
