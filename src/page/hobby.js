@@ -272,7 +272,6 @@ const Hob = ({setP}) => {
             open={songPreview}
             onClose={() => {
                 setPreview(false);
-                setSample(null);
             }}
             maxWidth="xl"
             scroll={'paper'}
